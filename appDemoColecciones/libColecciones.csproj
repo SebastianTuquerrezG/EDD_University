@@ -47,6 +47,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Nodos\clsNodoDobleEnlazado.cs" />
+    <Compile Include="Nodos\clsNodoEnlazado.cs" />
+    <Compile Include="Enlazada\clsColaEnlazada.cs" />
+    <Compile Include="Enlazada\clsListaEnlazada.cs" />
+    <Compile Include="Enlazada\clsPilaEnlazada.cs" />
+    <Compile Include="DobleEnlazada\clsColaDobleEnlazada.cs" />
+    <Compile Include="DobleEnlazada\clsListaDobleEnlazada.cs" />
+    <Compile Include="DobleEnlazada\clsPilaDobleEnlazada.cs" />
     <Compile Include="Interfaces\iCola.cs" />
     <Compile Include="Interfaces\iLista.cs" />
     <Compile Include="Vectoriales\clsColaVector.cs" />
