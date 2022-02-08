@@ -1,0 +1,13 @@
+C:\Users\Personal\Dropbox\PC\Desktop\UniversidadS3\LabEDD1\appDemoColecciones\appDemoColecciones\bin\Debug\appDemoColecciones.exe.config
+C:\Users\Personal\Dropbox\PC\Desktop\UniversidadS3\LabEDD1\appDemoColecciones\appDemoColecciones\bin\Debug\appDemoColecciones.exe
+C:\Users\Personal\Dropbox\PC\Desktop\UniversidadS3\LabEDD1\appDemoColecciones\appDemoColecciones\bin\Debug\appDemoColecciones.pdb
+C:\Users\Personal\Dropbox\PC\Desktop\UniversidadS3\LabEDD1\appDemoColecciones\appDemoColecciones\obj\Debug\appDemoColecciones.csprojResolveAssemblyReference.cache
+C:\Users\Personal\Dropbox\PC\Desktop\UniversidadS3\LabEDD1\appDemoColecciones\appDemoColecciones\obj\Debug\appDemoColecciones.exe
+C:\Users\Personal\Dropbox\PC\Desktop\UniversidadS3\LabEDD1\appDemoColecciones\appDemoColecciones\obj\Debug\appDemoColecciones.pdb
+E:\UniversidadS3\LabEDD1\appDemoColecciones\appDemoColecciones\bin\Debug\appDemoColecciones.exe.config
+E:\UniversidadS3\LabEDD1\appDemoColecciones\appDemoColecciones\bin\Debug\appDemoColecciones.exe
+E:\UniversidadS3\LabEDD1\appDemoColecciones\appDemoColecciones\bin\Debug\appDemoColecciones.pdb
+E:\UniversidadS3\LabEDD1\appDemoColecciones\appDemoColecciones\obj\Debug\appDemoColecciones.csproj.AssemblyReference.cache
+E:\UniversidadS3\LabEDD1\appDemoColecciones\appDemoColecciones\obj\Debug\appDemoColecciones.csproj.CoreCompileInputs.cache
+E:\UniversidadS3\LabEDD1\appDemoColecciones\appDemoColecciones\obj\Debug\appDemoColecciones.exe
+E:\UniversidadS3\LabEDD1\appDemoColecciones\appDemoColecciones\obj\Debug\appDemoColecciones.pdb
