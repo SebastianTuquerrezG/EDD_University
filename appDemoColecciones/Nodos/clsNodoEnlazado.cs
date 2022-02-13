@@ -1,9 +1,9 @@
 ﻿using System;
 using Servicios.Colecciones.Interfaces;
 
-namespace Servicios.Colecciones.Vectoriales
+namespace Servicios.Colecciones.Nodos
 {
-    public class clsListaVector<Tipo> : iLista<Tipo> where Tipo : IComparable
+    public class clsNodoEnlazado<Tipo> : iLista<Tipo> where Tipo : IComparable
     {
         #region Atributos
         private Tipo[] atrItems;

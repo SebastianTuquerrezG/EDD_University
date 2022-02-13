@@ -51,7 +51,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="uTestColaEnlazada.cs" />
+    <Compile Include="uTestColaEnlazada .cs" />
+    <Compile Include="uTestColaDobleEnlazada.cs" />
+    <Compile Include="uTestPilaDobleEnlazada.cs" />
     <Compile Include="uTestPilaEnlazada.cs" />
     <Compile Include="uTestColaVector.cs" />
     <Compile Include="uTestListaVector.cs" />

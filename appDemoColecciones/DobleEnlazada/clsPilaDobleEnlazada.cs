@@ -1,9 +1,10 @@
 ﻿using System;
 using Servicios.Colecciones.Interfaces;
+using Servicios.Colecciones.Nodos;
 
-namespace Servicios.Colecciones.Vectoriales
+namespace Servicios.Colecciones.DobleEnlazadas
 {
-    public class clsPilaVector<Tipo> : iPila<Tipo> where Tipo : IComparable
+    public class clsPilaDobleEnlazada<Tipo> : iPila<Tipo> where Tipo : IComparable
     {
         #region Atributos
         private Tipo[] atrItems;
@@ -13,6 +14,8 @@ namespace Servicios.Colecciones.Vectoriales
         private int atrCapacidad;
         private int atrFactorCrecimiento;
         private bool atrDinamica;
+        private clsNodoEnlazado<Tipo> atrPrimero;
+        private clsNodoEnlazado<Tipo> atrUltimo;
         #endregion
 
         #region Metodos
@@ -20,6 +23,8 @@ namespace Servicios.Colecciones.Vectoriales
         #region Accesores
         public Tipo[] darItems() { return atrItems; }
         public int darLongitud() { return atrLongitud; }
+        public clsNodoEnlazado<Tipo> darPrimero() { return atrPrimero; }
+        public clsNodoEnlazado<Tipo> darUltimo() { return atrUltimo; }
         public int darCapacidad() { return atrCapacidad; }
         public int darFactorCrecimiento() { return atrFactorCrecimiento; }
         #endregion
@@ -77,7 +82,7 @@ namespace Servicios.Colecciones.Vectoriales
         #endregion
 
         #region Constructores
-        public clsPilaVector()
+        public clsPilaDobleEnlazada()
         {
             atrFactorCrecimiento = 1000;
             atrDinamica = true;
@@ -85,7 +90,7 @@ namespace Servicios.Colecciones.Vectoriales
             atrCapacidad = 0;
             atrLongitud = 0;
         }
-        public clsPilaVector(int prmCapacidad)
+        public clsPilaDobleEnlazada(int prmCapacidad)
         {
             atrFactorCrecimiento = 1000;
             atrDinamica = true;
@@ -106,7 +111,7 @@ namespace Servicios.Colecciones.Vectoriales
                 }
             }
         }
-        public clsPilaVector(int prmCapacidad, bool prmFlexible)
+        public clsPilaDobleEnlazada(int prmCapacidad, bool prmFlexible)
         {
             atrFactorCrecimiento = 1000;
             atrDinamica = prmFlexible;
@@ -129,7 +134,7 @@ namespace Servicios.Colecciones.Vectoriales
                 }
             }
         }
-        public clsPilaVector(int prmCapacidad, int prmFactorCrecimiento)
+        public clsPilaDobleEnlazada(int prmCapacidad, int prmFactorCrecimiento)
         {
             atrFactorCrecimiento = prmFactorCrecimiento;
             atrDinamica = true;

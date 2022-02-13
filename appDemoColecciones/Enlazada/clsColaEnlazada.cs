@@ -1,9 +1,10 @@
 ﻿using System;
 using Servicios.Colecciones.Interfaces;
+using Servicios.Colecciones.Nodos;
 
-namespace Servicios.Colecciones.Vectoriales
+namespace Servicios.Colecciones.Enlazadas
 {
-    public class clsColaVector<Tipo> : iCola<Tipo> where Tipo : IComparable
+    public class clsColaEnlazada<Tipo> : iCola<Tipo> where Tipo : IComparable
     {
         #region Atributos
         private Tipo[] atrItems;
@@ -13,6 +14,8 @@ namespace Servicios.Colecciones.Vectoriales
         private int atrCapacidad;
         private int atrFactorCrecimiento;
         private bool atrDinamica;
+        private clsNodoEnlazado<Tipo> atrPrimero;
+        private clsNodoEnlazado<Tipo> atrUltimo;
         #endregion
 
         #region Metodos
@@ -22,7 +25,8 @@ namespace Servicios.Colecciones.Vectoriales
         public int darLongitud() { return atrLongitud; }
         public int darCapacidad() { return atrCapacidad; }
         public int darFactorCrecimiento() { return atrFactorCrecimiento; }
-
+        public clsNodoEnlazado<Tipo> darPrimero() { return atrPrimero; }
+        public clsNodoEnlazado<Tipo> darUltimo() { return atrUltimo; }
         #endregion
 
         #region Mutadores
@@ -78,7 +82,7 @@ namespace Servicios.Colecciones.Vectoriales
         #endregion
 
         #region Constructores
-        public clsColaVector()
+        public clsColaEnlazada()
         {
             atrFactorCrecimiento = 1000;
             atrDinamica = true;
@@ -86,7 +90,7 @@ namespace Servicios.Colecciones.Vectoriales
             atrCapacidad = 0;
             atrLongitud = 0;
         }
-        public clsColaVector(int prmCapacidad)
+        public clsColaEnlazada(int prmCapacidad)
         {
             atrFactorCrecimiento = 1000;
             atrDinamica = true;
@@ -107,7 +111,7 @@ namespace Servicios.Colecciones.Vectoriales
                 }
             }
         }
-        public clsColaVector(int prmCapacidad, bool prmFlexible)
+        public clsColaEnlazada(int prmCapacidad, bool prmFlexible)
         {
             atrFactorCrecimiento = 1000;
             atrDinamica = prmFlexible;
@@ -130,7 +134,7 @@ namespace Servicios.Colecciones.Vectoriales
                 }
             }
         }
-        public clsColaVector(int prmCapacidad, int prmFactorCrecimiento)
+        public clsColaEnlazada(int prmCapacidad, int prmFactorCrecimiento)
         {
             atrFactorCrecimiento = prmFactorCrecimiento;
             atrDinamica = true;
