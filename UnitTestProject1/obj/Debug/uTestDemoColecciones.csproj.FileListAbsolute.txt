@@ -41,3 +41,15 @@ C:\DiscoD\UniversidadS3\LabEDD1\appDemoColecciones\UnitTestProject1\obj\Debug\uT
 C:\DiscoD\UniversidadS3\LabEDD1\appDemoColecciones\UnitTestProject1\obj\Debug\uTestDemoColecciones.csproj.CopyComplete
 C:\DiscoD\UniversidadS3\LabEDD1\appDemoColecciones\UnitTestProject1\obj\Debug\uTestDemoColecciones.dll
 C:\DiscoD\UniversidadS3\LabEDD1\appDemoColecciones\UnitTestProject1\obj\Debug\uTestDemoColecciones.pdb
+C:\DiscoD\UniversidadS3\appDemoColecciones\UnitTestProject1\bin\Debug\uTestDemoColecciones.dll
+C:\DiscoD\UniversidadS3\appDemoColecciones\UnitTestProject1\bin\Debug\uTestDemoColecciones.pdb
+C:\DiscoD\UniversidadS3\appDemoColecciones\UnitTestProject1\bin\Debug\libColecciones.dll
+C:\DiscoD\UniversidadS3\appDemoColecciones\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\DiscoD\UniversidadS3\appDemoColecciones\UnitTestProject1\bin\Debug\libColecciones.pdb
+C:\DiscoD\UniversidadS3\appDemoColecciones\UnitTestProject1\bin\Debug\libColecciones.dll.config
+C:\DiscoD\UniversidadS3\appDemoColecciones\UnitTestProject1\bin\Debug\es\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+C:\DiscoD\UniversidadS3\appDemoColecciones\UnitTestProject1\obj\Debug\uTestDemoColecciones.csproj.AssemblyReference.cache
+C:\DiscoD\UniversidadS3\appDemoColecciones\UnitTestProject1\obj\Debug\uTestDemoColecciones.csproj.CoreCompileInputs.cache
+C:\DiscoD\UniversidadS3\appDemoColecciones\UnitTestProject1\obj\Debug\uTestDemoColecciones.csproj.CopyComplete
+C:\DiscoD\UniversidadS3\appDemoColecciones\UnitTestProject1\obj\Debug\uTestDemoColecciones.dll
+C:\DiscoD\UniversidadS3\appDemoColecciones\UnitTestProject1\obj\Debug\uTestDemoColecciones.pdb

@@ -9,7 +9,7 @@ namespace uTestDemoColecciones
     public class uTestPilaEnlazada
     {
         #region Atributos de prueba
-        private clsPilaEnlazada<int> testPila;
+        private clsPilaEnlazada<int> testTAD;
         private int[] testItems;
         private int testItem;
         #endregion
@@ -22,11 +22,11 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testPila = new clsPilaEnlazada<int>();
-            Assert.AreNotEqual(null, testPila.darItems());
-            Assert.AreEqual(0, testPila.darLongitud());
-            Assert.AreEqual(null, testPila.darPrimero());
-            Assert.AreEqual(null, testPila.darUltimo());
+            testTAD = new clsPilaEnlazada<int>();
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(null, testTAD.darPrimero());
+            Assert.AreEqual(null, testTAD.darUltimo());
             #endregion
         }
         #endregion
@@ -36,28 +36,28 @@ namespace uTestDemoColecciones
         public void uTestDarItems()
         {
             #region Configurar
-            testPila = new clsPilaEnlazada<int>();
+            testTAD = new clsPilaEnlazada<int>();
             testItems = new int[3] { 1, 2, 3 };
-            testPila.ponerItems(testItems);
+            testTAD.ponerItems(testItems);
             #endregion
             #region Probar y Comprobar
-            Assert.AreNotEqual(null, testPila.darItems());
-            Assert.AreEqual(3, testPila.darItems().Length);
-            Assert.AreEqual(1, testPila.darItems()[0]);
-            Assert.AreEqual(2, testPila.darItems()[1]);
-            Assert.AreEqual(3, testPila.darItems()[2]);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(3, testTAD.darItems().Length);
+            Assert.AreEqual(1, testTAD.darItems()[0]);
+            Assert.AreEqual(2, testTAD.darItems()[1]);
+            Assert.AreEqual(3, testTAD.darItems()[2]);
             #endregion
         }
         [TestMethod]
         public void uTestDarLongitud()
         {
             #region Configurar
-            testPila = new clsPilaEnlazada<int>();
+            testTAD = new clsPilaEnlazada<int>();
             testItems = new int[3] { 1, 2, 3 };
-            testPila.ponerItems(testItems);
+            testTAD.ponerItems(testItems);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(3, testPila.darLongitud());
+            Assert.AreEqual(3, testTAD.darLongitud());
             #endregion
         }
         #endregion
@@ -66,56 +66,56 @@ namespace uTestDemoColecciones
         public void uTestPonerItemsConLongitudCero()
         {
             #region Configurar
-            testPila = new clsPilaEnlazada<int>();
+            testTAD = new clsPilaEnlazada<int>();
             testItems = new int[0];
             #endregion
             #region Probar y Comprobar
-            Assert.AreNotEqual(false, testPila.ponerItems(testItems));
-            Assert.AreEqual(0, testPila.darLongitud());
-            Assert.AreEqual(null, testPila.darPrimero());
-            Assert.AreEqual(null, testPila.darUltimo());
+            Assert.AreNotEqual(false, testTAD.ponerItems(testItems));
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(null, testTAD.darPrimero());
+            Assert.AreEqual(null, testTAD.darUltimo());
             #endregion
         }
         [TestMethod]
         public void uTestPonerItemsConLongitudNormal()
         {
             #region Configurar
-            testPila = new clsPilaEnlazada<int>();
+            testTAD = new clsPilaEnlazada<int>();
             testItems = new int[3] { 1, 2, 3 };
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testPila.ponerItems(testItems));
-            Assert.AreEqual(3, testPila.darLongitud());
-            Assert.AreEqual(1, testPila.darItems()[0]);
-            Assert.AreEqual(2, testPila.darItems()[1]);
-            Assert.AreEqual(3, testPila.darItems()[2]);
-            Assert.AreEqual(3, testPila.darItems().Length);
+            Assert.AreEqual(true, testTAD.ponerItems(testItems));
+            Assert.AreEqual(3, testTAD.darLongitud());
+            Assert.AreEqual(1, testTAD.darItems()[0]);
+            Assert.AreEqual(2, testTAD.darItems()[1]);
+            Assert.AreEqual(3, testTAD.darItems()[2]);
+            Assert.AreEqual(3, testTAD.darItems().Length);
             #endregion
         }
         [TestMethod]
         public void uTestPonerItemsConLongitudEnBorde()
         {
             #region Configurar
-            testPila = new clsPilaEnlazada<int>();
+            testTAD = new clsPilaEnlazada<int>();
             testItems = new int[int.MaxValue / 16];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testPila.ponerItems(testItems));
-            Assert.AreEqual(int.MaxValue / 16, testPila.darLongitud());
-            Assert.AreEqual(int.MaxValue / 16, testPila.darItems().Length);
-            CollectionAssert.AreEqual(testItems, testPila.darItems());
+            Assert.AreEqual(true, testTAD.ponerItems(testItems));
+            Assert.AreEqual(int.MaxValue / 16, testTAD.darLongitud());
+            Assert.AreEqual(int.MaxValue / 16, testTAD.darItems().Length);
+            CollectionAssert.AreEqual(testItems, testTAD.darItems());
         }
         [TestMethod]
         public void uTestPonerItemsConLongitudMasAlladelBorde()
         {
             #region Configurar
-            testPila = new clsPilaEnlazada<int>();
+            testTAD = new clsPilaEnlazada<int>();
             testItems = new int[int.MaxValue / 16 + 1];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testPila.ponerItems(testItems));
-            Assert.AreEqual(0, testPila.darLongitud());
-            Assert.AreEqual(null, testPila.darItems());
+            Assert.AreEqual(false, testTAD.ponerItems(testItems));
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(null, testTAD.darItems());
             #endregion
         }
         #endregion
@@ -128,24 +128,24 @@ namespace uTestDemoColecciones
         public void uTestapilarItemEnTADVacio()
         {
             #region Configurar
-            testPila = new clsPilaEnlazada<int>();
+            testTAD = new clsPilaEnlazada<int>();
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testPila.apilar(123));
-            Assert.AreEqual(123, testPila.darItems()[0]);
-            Assert.AreEqual(1, testPila.darLongitud());
+            Assert.AreEqual(true, testTAD.apilar(123));
+            Assert.AreEqual(123, testTAD.darItems()[0]);
+            Assert.AreEqual(1, testTAD.darLongitud());
             #endregion
         }
         [TestMethod]
         public void uTestapilarItemEnTADConItems()
         {
             #region Configurar
-            testPila = new clsPilaEnlazada<int>();
+            testTAD = new clsPilaEnlazada<int>();
             testItems = new int[3];
             testItems[0] = 789;
             testItems[1] = 456;
             testItems[2] = 123;
-            testPila.ponerItems(testItems);
+            testTAD.ponerItems(testItems);
 
             testItems = new int[4];
             testItems[0] = 777;
@@ -154,24 +154,24 @@ namespace uTestDemoColecciones
             testItems[3] = 123;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testPila.apilar(777));
-            Assert.AreEqual(4, testPila.darLongitud());
-            CollectionAssert.AreEqual(testItems, testPila.darItems());
+            Assert.AreEqual(true, testTAD.apilar(777));
+            Assert.AreEqual(4, testTAD.darLongitud());
+            CollectionAssert.AreEqual(testItems, testTAD.darItems());
             #endregion
         }
         [TestMethod]
         public void uTestapilarItemEnTADLlenoEnBorde()
         {
             #region Configurar
-            testPila = new clsPilaEnlazada<int>();
+            testTAD = new clsPilaEnlazada<int>();
             testItems = new int[int.MaxValue / 16];
-            testPila.ponerItems(testItems);
+            testTAD.ponerItems(testItems);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testPila.apilar(777));
-            Assert.AreEqual(int.MaxValue / 16, testPila.darLongitud());
-            Assert.AreEqual(int.MaxValue / 16, testPila.darItems().Length);
-            CollectionAssert.AreEqual(testItems, testPila.darItems());
+            Assert.AreEqual(false, testTAD.apilar(777));
+            Assert.AreEqual(int.MaxValue / 16, testTAD.darLongitud());
+            Assert.AreEqual(int.MaxValue / 16, testTAD.darItems().Length);
+            CollectionAssert.AreEqual(testItems, testTAD.darItems());
             #endregion
         }
         #endregion
@@ -180,26 +180,26 @@ namespace uTestDemoColecciones
         public void uTestDesapilarEnTADVacio()
         {
             #region Configurar
-            testPila = new clsPilaEnlazada<int>();
+            testTAD = new clsPilaEnlazada<int>();
             testItem = -1;
             #endregion 
             #region Probar y Comprobar
-            Assert.AreEqual(false, testPila.desapilar(ref testItem));
+            Assert.AreEqual(false, testTAD.desapilar(ref testItem));
             Assert.AreEqual(-1, testItem);
-            Assert.AreEqual(0, testPila.darLongitud());
-            Assert.AreEqual(null, testPila.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(null, testTAD.darItems());
             #endregion
         }
         [TestMethod]
         public void uTestDesapilarEnTADConItems()
         {
             #region Configurar
-            testPila = new clsPilaEnlazada<int>();
+            testTAD = new clsPilaEnlazada<int>();
             testItems = new int[3];
             testItems[0] = 123;
             testItems[1] = 456;
             testItems[2] = 789;
-            testPila.ponerItems(testItems);
+            testTAD.ponerItems(testItems);
 
             testItems = new int[2];
             testItems[0] = 456;
@@ -207,10 +207,10 @@ namespace uTestDemoColecciones
             testItem = 0;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testPila.desapilar(ref testItem));
+            Assert.AreEqual(true, testTAD.desapilar(ref testItem));
             Assert.AreEqual(123, testItem);
-            Assert.AreEqual(2, testPila.darLongitud());
-            CollectionAssert.AreEqual(testItems, testPila.darItems());
+            Assert.AreEqual(2, testTAD.darLongitud());
+            CollectionAssert.AreEqual(testItems, testTAD.darItems());
             #endregion
         }
         #endregion
@@ -219,35 +219,35 @@ namespace uTestDemoColecciones
         public void uTestRevisarEnTADVacio()
         {
             #region Configurar
-            testPila = new clsPilaEnlazada<int>();
+            testTAD = new clsPilaEnlazada<int>();
             testItems = new int[0];
             testItem = -1;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testPila.revisar(ref testItem));
+            Assert.AreEqual(false, testTAD.revisar(ref testItem));
             Assert.AreEqual(-1, testItem);
-            Assert.AreEqual(0, testPila.darLongitud());
-            Assert.AreEqual(null, testPila.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(null, testTAD.darItems());
             #endregion
         }
         [TestMethod]
         public void uTestRevisarEnTADConItems()
         {
             #region Configurar
-            testPila = new clsPilaEnlazada<int>();
+            testTAD = new clsPilaEnlazada<int>();
             testItems = new int[3];
             testItems[0] = 123;
             testItems[1] = 456;
             testItems[2] = 789;
-            testPila.ponerItems(testItems);
+            testTAD.ponerItems(testItems);
             testItem = 0;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testPila.revisar(ref testItem));
+            Assert.AreEqual(true, testTAD.revisar(ref testItem));
             Assert.AreEqual(123, testItem);
-            Assert.AreEqual(3, testPila.darLongitud());
-            Assert.AreEqual(3, testPila.darItems().Length);
-            CollectionAssert.AreEqual(testItems, testPila.darItems());
+            Assert.AreEqual(3, testTAD.darLongitud());
+            Assert.AreEqual(3, testTAD.darItems().Length);
+            CollectionAssert.AreEqual(testItems, testTAD.darItems());
             #endregion
         }
         #endregion
@@ -256,28 +256,28 @@ namespace uTestDemoColecciones
         public void testReversarEnTADConItems()
         {
             #region Inicializar
-            testPila = new clsPilaEnlazada<int>();
+            testTAD = new clsPilaEnlazada<int>();
             testItems = new int[4] { 1, 2, 3, 4 };
-            testPila.ponerItems(testItems);
+            testTAD.ponerItems(testItems);
             testItems = new int[4] { 4, 3, 2, 1 };
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testPila.reversar());
-            Assert.AreEqual(4, testPila.darLongitud());
-            Assert.AreEqual(4, testPila.darItems().Length);
-            CollectionAssert.AreEqual(testItems, testPila.darItems());
+            Assert.AreEqual(true, testTAD.reversar());
+            Assert.AreEqual(4, testTAD.darLongitud());
+            Assert.AreEqual(4, testTAD.darItems().Length);
+            CollectionAssert.AreEqual(testItems, testTAD.darItems());
             #endregion
         }
         [TestMethod]
         public void testReversarConTADVacio()
         {
             #region Inicializar
-            testPila = new clsPilaEnlazada<int>(4);
+            testTAD = new clsPilaEnlazada<int>();
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testPila.reversar());
-            Assert.AreEqual(0, testPila.darLongitud());
-            Assert.AreEqual(null, testPila.darItems());
+            Assert.AreEqual(false, testTAD.reversar());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(null, testTAD.darItems());
             #endregion
         }
         #endregion

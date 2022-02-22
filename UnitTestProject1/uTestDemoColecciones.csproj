@@ -53,7 +53,9 @@
   <ItemGroup>
     <Compile Include="uTestColaEnlazada .cs" />
     <Compile Include="uTestColaDobleEnlazada.cs" />
+    <Compile Include="uTestListaDobleEnlazada.cs" />
     <Compile Include="uTestPilaDobleEnlazada.cs" />
+    <Compile Include="uTestListaEnlazada.cs" />
     <Compile Include="uTestPilaEnlazada.cs" />
     <Compile Include="uTestColaVector.cs" />
     <Compile Include="uTestListaVector.cs" />
