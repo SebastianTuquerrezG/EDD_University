@@ -29,3 +29,4 @@ C:\DiscoD\UniversidadS3\appDemoColecciones\appDemoColecciones\bin\Debug\libColec
 C:\DiscoD\UniversidadS3\appDemoColecciones\appDemoColecciones\obj\Debug\libColecciones.csproj.CoreCompileInputs.cache
 C:\DiscoD\UniversidadS3\appDemoColecciones\appDemoColecciones\obj\Debug\libColecciones.dll
 C:\DiscoD\UniversidadS3\appDemoColecciones\appDemoColecciones\obj\Debug\libColecciones.pdb
+C:\DiscoD\UniversidadS3\appDemoColecciones\appDemoColecciones\obj\Debug\libColecciones.csproj.AssemblyReference.cache

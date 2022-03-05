@@ -286,7 +286,7 @@ namespace uTestDemoColecciones
             #region Probar y Comprobar
             Assert.AreEqual(true, testTAD.insertarEn(2, 4));
             Assert.AreEqual(4, testTAD.darLongitud());
-            Assert.AreEqual(1000, testTAD.darItems().Length);
+            Assert.AreEqual(4, testTAD.darItems().Length);
             CollectionAssert.AreEqual(testItems, testTAD.darItems());
             #endregion
         }
@@ -315,7 +315,7 @@ namespace uTestDemoColecciones
             testItems = new int[3];
             testItems[0] = 1;
             testItems[1] = 2;
-            testItems[2] = 4;
+            testItems[2] = 3;
             testTAD.ponerItems(testItems);
 
             testItems = new int[4];
@@ -413,12 +413,12 @@ namespace uTestDemoColecciones
             #region Probar y Comprobar
             Assert.AreEqual(false, testTAD.extraerEn(0, ref testItem));
             Assert.AreEqual(default(int), testItem);
-            Assert.AreEqual(1, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darLongitud());
             CollectionAssert.AreEqual(testItems, testTAD.darItems());
             #endregion
         }
         [TestMethod]
-        public void uTestextraerItemEnIndiceCeroEnTADConItems()
+        public void uTestExtraerItemEnIndiceCeroEnTADConItems()
         {
             #region Configurar
             testTAD = new clsListaDobleEnlazada<int>();
@@ -429,8 +429,8 @@ namespace uTestDemoColecciones
             #region Probar y Comprobar
             Assert.AreEqual(true, testTAD.extraerEn(0, ref testItem));
             Assert.AreEqual(1, testItem);
-            Assert.AreEqual(4, testTAD.darLongitud());
-            Assert.AreEqual(4, testTAD.darItems().Length);
+            Assert.AreEqual(2, testTAD.darLongitud());
+            Assert.AreEqual(2, testTAD.darItems().Length);
             CollectionAssert.AreEqual(testItems, testTAD.darItems());
             #endregion
         }
@@ -492,7 +492,7 @@ namespace uTestDemoColecciones
             testTAD.ponerItems(testItems);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testTAD.extraerEn(3, ref testItem));
+            Assert.AreEqual(false, testTAD.extraerEn(3, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(3, testTAD.darLongitud());
             Assert.AreEqual(3, testTAD.darItems().Length);
@@ -630,8 +630,8 @@ namespace uTestDemoColecciones
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(true, testTAD.modificarEn(2,777));
-            Assert.AreEqual(2, testTAD.darLongitud());
-            Assert.AreEqual(2, testTAD.darItems().Length);
+            Assert.AreEqual(3, testTAD.darLongitud());
+            Assert.AreEqual(3, testTAD.darItems().Length);
             CollectionAssert.AreEqual(testItems, testTAD.darItems());
             #endregion
         }
@@ -826,7 +826,7 @@ namespace uTestDemoColecciones
             testTAD.ponerItems(testItems);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testTAD.recuperarEn(3, ref testItem));
+            Assert.AreEqual(false, testTAD.recuperarEn(3, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(3, testTAD.darLongitud());
             Assert.AreEqual(3, testTAD.darItems().Length);
@@ -869,7 +869,7 @@ namespace uTestDemoColecciones
         #endregion
         #region Contiene Item
         [TestMethod]
-        public void uTestContieneItemConIndiceNegativoEnTADVacio()
+        public void uTestContieneItemEnTADVacio()
         {
             #region Configurar
             testTAD = new clsListaDobleEnlazada<int>();
@@ -882,7 +882,7 @@ namespace uTestDemoColecciones
             #endregion
         }
         [TestMethod]
-        public void uTestcontieneItemConIndiceNegativoEnTADConItems()
+        public void uTestContieneItemEnTADConItems()
         {
             #region Configurar
             testTAD = new clsListaDobleEnlazada<int>();
@@ -890,14 +890,14 @@ namespace uTestDemoColecciones
             testTAD.ponerItems(testItems);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testTAD.contieneA(3));
+            Assert.AreEqual(true, testTAD.contieneA(3));
             Assert.AreEqual(3, testTAD.darLongitud());
             Assert.AreEqual(3, testTAD.darItems().Length);
             CollectionAssert.AreEqual(testItems, testTAD.darItems());
             #endregion
         }
         [TestMethod]
-        public void uTestcontieneItemConIndiceNegativoEnTADItems()
+        public void uTestNOContieneItemConIndiceNegativoEnTADItems()
         {
             #region Configurar
             testTAD = new clsListaDobleEnlazada<int>();

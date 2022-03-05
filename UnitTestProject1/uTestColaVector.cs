@@ -9,7 +9,7 @@ namespace uTestDemoColecciones
     public class uTestColaVector
     {
         #region Atributos de prueba
-        private clsColaVector<int> testCola;
+        private clsColaVector<int> testTAD;
         private int[] testItems;
         private int testItem;
         #endregion
@@ -22,13 +22,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>();
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>();
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
         #endregion
@@ -39,13 +39,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(-100);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(-100);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
@@ -54,13 +54,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar 
-            testCola = new clsColaVector<int>(0);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(0);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
@@ -69,13 +69,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(500);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(500, testCola.darItems().Length);
-            Assert.AreEqual(500, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(500);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(500, testTAD.darItems().Length);
+            Assert.AreEqual(500, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
@@ -84,13 +84,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar 
-            testCola = new clsColaVector<int>(int.MaxValue / 16);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(int.MaxValue / 16, testCola.darItems().Length);
-            Assert.AreEqual(int.MaxValue / 16, testCola.darCapacidad());
-            Assert.AreEqual(false, testCola.esDinamica());
-            Assert.AreEqual(0, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(int.MaxValue / 16);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(int.MaxValue / 16, testTAD.darItems().Length);
+            Assert.AreEqual(int.MaxValue / 16, testTAD.darCapacidad());
+            Assert.AreEqual(false, testTAD.esDinamica());
+            Assert.AreEqual(0, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
@@ -99,13 +99,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(int.MaxValue / 16 + 1);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(int.MaxValue / 16 + 1);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
@@ -114,13 +114,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(int.MaxValue);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(int.MaxValue);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
         #endregion
@@ -131,13 +131,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(-100, true);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(-100, true);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
@@ -146,13 +146,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar 
-            testCola = new clsColaVector<int>(-100, false);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(-100, false);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
@@ -161,13 +161,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar 
-            testCola = new clsColaVector<int>(0, true);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(0, true);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
@@ -176,13 +176,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(0, false);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(0, false);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
@@ -191,13 +191,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(500, true);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(500, testCola.darItems().Length);
-            Assert.AreEqual(500, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(500, true);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(500, testTAD.darItems().Length);
+            Assert.AreEqual(500, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
@@ -206,13 +206,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(500, false);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(500, testCola.darItems().Length);
-            Assert.AreEqual(500, testCola.darCapacidad());
-            Assert.AreEqual(false, testCola.esDinamica());
-            Assert.AreEqual(0, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(500, false);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(500, testTAD.darItems().Length);
+            Assert.AreEqual(500, testTAD.darCapacidad());
+            Assert.AreEqual(false, testTAD.esDinamica());
+            Assert.AreEqual(0, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
@@ -221,13 +221,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(int.MaxValue / 16 + 1, true);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(int.MaxValue / 16 + 1, true);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
@@ -236,13 +236,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(int.MaxValue / 16 + 1, false);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(int.MaxValue / 16 + 1, false);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
@@ -251,13 +251,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(int.MaxValue, true);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(int.MaxValue, true);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
@@ -266,13 +266,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar 
-            testCola = new clsColaVector<int>(int.MaxValue, false);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(int.MaxValue, false);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
         #endregion
@@ -283,13 +283,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(-100, -10);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(-100, -10);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
@@ -298,13 +298,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(-100, 0);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(-100, 0);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
@@ -313,13 +313,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(-100, 10);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(-100, 10);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
@@ -328,13 +328,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(-100, int.MaxValue / 16 + 1);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(-100, int.MaxValue / 16 + 1);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
 
@@ -344,13 +344,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(0, -1);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(0, -1);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
@@ -359,13 +359,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(0, 0);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(0, 0);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
@@ -374,13 +374,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(0, 500);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(500, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(0, 500);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(500, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
@@ -389,13 +389,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(0, int.MaxValue / 16 + 1);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(0, int.MaxValue / 16 + 1);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
 
@@ -405,13 +405,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(500, -1);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(500, -1);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
@@ -420,13 +420,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(500, 0);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(500, testCola.darItems().Length);
-            Assert.AreEqual(500, testCola.darCapacidad());
-            Assert.AreEqual(false, testCola.esDinamica());
-            Assert.AreEqual(0, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(500, 0);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(500, testTAD.darItems().Length);
+            Assert.AreEqual(500, testTAD.darCapacidad());
+            Assert.AreEqual(false, testTAD.esDinamica());
+            Assert.AreEqual(0, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
@@ -435,13 +435,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(500, 500);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(500, testCola.darItems().Length);
-            Assert.AreEqual(500, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(500, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(500, 500);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(500, testTAD.darItems().Length);
+            Assert.AreEqual(500, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(500, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
@@ -450,13 +450,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(500, int.MaxValue / 16 + 1);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(500, int.MaxValue / 16 + 1);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
 
@@ -466,13 +466,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(int.MaxValue / 16, -1);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(int.MaxValue / 16, -1);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
@@ -481,13 +481,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(int.MaxValue / 16, 0);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(int.MaxValue / 16, testCola.darItems().Length);
-            Assert.AreEqual(int.MaxValue / 16, testCola.darCapacidad());
-            Assert.AreEqual(false, testCola.esDinamica());
-            Assert.AreEqual(0, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(int.MaxValue / 16, 0);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(int.MaxValue / 16, testTAD.darItems().Length);
+            Assert.AreEqual(int.MaxValue / 16, testTAD.darCapacidad());
+            Assert.AreEqual(false, testTAD.esDinamica());
+            Assert.AreEqual(0, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
@@ -496,13 +496,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(int.MaxValue / 16, 500);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(int.MaxValue / 16, 500);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
@@ -511,13 +511,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(int.MaxValue / 16, int.MaxValue / 16 + 1);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(int.MaxValue / 16, int.MaxValue / 16 + 1);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
 
@@ -527,13 +527,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(int.MaxValue / 16 + 1, -1);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(int.MaxValue / 16 + 1, -1);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
@@ -542,13 +542,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(int.MaxValue / 16 + 1, 0);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(int.MaxValue / 16 + 1, 0);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
@@ -557,13 +557,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(int.MaxValue / 16 + 1, 500);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(int.MaxValue / 16 + 1, 500);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
@@ -572,13 +572,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(int.MaxValue / 16 + 1, int.MaxValue / 16 + 1);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(int.MaxValue / 16 + 1, int.MaxValue / 16 + 1);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
 
@@ -588,13 +588,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(int.MaxValue, -1);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(int.MaxValue, -1);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
@@ -603,13 +603,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(int.MaxValue, 0);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(int.MaxValue, 0);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
@@ -618,13 +618,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(int.MaxValue, 500);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(int.MaxValue, 500);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
@@ -633,13 +633,13 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testCola = new clsColaVector<int>(int.MaxValue, int.MaxValue / 16 + 1);
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            testTAD = new clsColaVector<int>(int.MaxValue, int.MaxValue / 16 + 1);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
         #endregion
@@ -649,50 +649,50 @@ namespace uTestDemoColecciones
         public void uTestDarItems()
         {
             #region Configurar
-            testCola = new clsColaVector<int>();
+            testTAD = new clsColaVector<int>();
             testItems = new int[3] { 1, 2, 3 };
-            testCola.ponerItems(testItems);
+            testTAD.ponerItems(testItems);
             #endregion
             #region Probar y Comprobar
-            Assert.AreNotEqual(null, testCola.darItems());
-            Assert.AreEqual(3, testCola.darItems().Length);
-            Assert.AreEqual(1, testCola.darItems()[0]);
-            Assert.AreEqual(2, testCola.darItems()[1]);
-            Assert.AreEqual(3, testCola.darItems()[2]);
+            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(3, testTAD.darItems().Length);
+            Assert.AreEqual(1, testTAD.darItems()[0]);
+            Assert.AreEqual(2, testTAD.darItems()[1]);
+            Assert.AreEqual(3, testTAD.darItems()[2]);
             #endregion
         }
         [TestMethod]
         public void uTestDarCapacidad()
         {
             #region Configurar
-            testCola = new clsColaVector<int>();
+            testTAD = new clsColaVector<int>();
             testItems = new int[3] { 1, 2, 3 };
-            testCola.ponerItems(testItems);
+            testTAD.ponerItems(testItems);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(3, testCola.darCapacidad());
+            Assert.AreEqual(3, testTAD.darCapacidad());
             #endregion
         }
         [TestMethod]
         public void uTestDarLongitud()
         {
             #region Configurar
-            testCola = new clsColaVector<int>();
+            testTAD = new clsColaVector<int>();
             testItems = new int[3] { 1, 2, 3 };
-            testCola.ponerItems(testItems);
+            testTAD.ponerItems(testItems);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(3, testCola.darLongitud());
+            Assert.AreEqual(3, testTAD.darLongitud());
             #endregion
         }
         [TestMethod]
         public void uTestDarFactorCrecimiento()
         {
             #region Configurar
-            testCola = new clsColaVector<int>();
+            testTAD = new clsColaVector<int>();
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
         #endregion
@@ -701,65 +701,65 @@ namespace uTestDemoColecciones
         public void uTestPonerItemsConLongitudCero()
         {
             #region Configurar
-            testCola = new clsColaVector<int>();
+            testTAD = new clsColaVector<int>();
             testItems = new int[0];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testCola.ponerItems(testItems));
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            Assert.AreEqual(true, testTAD.ponerItems(testItems));
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
         public void uTestPonerItemsConLongitudNormal()
         {
             #region Configurar
-            testCola = new clsColaVector<int>();
+            testTAD = new clsColaVector<int>();
             testItems = new int[3] { 1, 2, 3 };
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testCola.ponerItems(testItems));
-            Assert.AreEqual(3, testCola.darCapacidad());
-            Assert.AreEqual(3, testCola.darLongitud());
-            Assert.AreEqual(1, testCola.darItems()[0]);
-            Assert.AreEqual(2, testCola.darItems()[1]);
-            Assert.AreEqual(3, testCola.darItems()[2]);
-            Assert.AreEqual(3, testCola.darItems().Length);
+            Assert.AreEqual(true, testTAD.ponerItems(testItems));
+            Assert.AreEqual(3, testTAD.darCapacidad());
+            Assert.AreEqual(3, testTAD.darLongitud());
+            Assert.AreEqual(1, testTAD.darItems()[0]);
+            Assert.AreEqual(2, testTAD.darItems()[1]);
+            Assert.AreEqual(3, testTAD.darItems()[2]);
+            Assert.AreEqual(3, testTAD.darItems().Length);
             #endregion
         }
         [TestMethod]
         public void uTestPonerItemsConLongitudEnBorde()
         {
             #region Configurar
-            testCola = new clsColaVector<int>();
+            testTAD = new clsColaVector<int>();
             testItems = new int[int.MaxValue / 16];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testCola.ponerItems(testItems));
-            Assert.AreEqual(int.MaxValue / 16, testCola.darCapacidad());
-            Assert.AreEqual(int.MaxValue / 16, testCola.darLongitud());
-            Assert.AreEqual(int.MaxValue / 16, testCola.darItems().Length);
-            Assert.AreEqual(false, testCola.esDinamica());
-            Assert.AreEqual(0, testCola.darFactorCrecimiento());
+            Assert.AreEqual(true, testTAD.ponerItems(testItems));
+            Assert.AreEqual(int.MaxValue / 16, testTAD.darCapacidad());
+            Assert.AreEqual(int.MaxValue / 16, testTAD.darLongitud());
+            Assert.AreEqual(int.MaxValue / 16, testTAD.darItems().Length);
+            Assert.AreEqual(false, testTAD.esDinamica());
+            Assert.AreEqual(0, testTAD.darFactorCrecimiento());
             for (int varIterador = 0; varIterador < int.MaxValue / 16; varIterador++)
-                Assert.AreEqual(0, testCola.darItems()[varIterador]);         
+                Assert.AreEqual(0, testTAD.darItems()[varIterador]);         
             #endregion
         }
         [TestMethod]
         public void uTestPonerItemsConLongitudMasAlladelBorde()
         {
             #region Configurar
-            testCola = new clsColaVector<int>();
+            testTAD = new clsColaVector<int>();
             testItems = new int[int.MaxValue / 16 + 1];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testCola.ponerItems(testItems));
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darItems().Length);
+            Assert.AreEqual(false, testTAD.ponerItems(testItems));
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darItems().Length);
             #endregion
         }
 
@@ -767,45 +767,45 @@ namespace uTestDemoColecciones
         public void uTestAjustarFlexibilidadCapacidadEnBorde()
         {
             #region Configurar
-            testCola = new clsColaVector<int>(int.MaxValue / 16);
+            testTAD = new clsColaVector<int>(int.MaxValue / 16);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testCola.ajustarFlexibilidad(true));
-            Assert.AreEqual(false, testCola.esDinamica());
-            Assert.AreEqual(0, testCola.darFactorCrecimiento());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(int.MaxValue / 16, testCola.darCapacidad());
-            Assert.AreEqual(int.MaxValue / 16, testCola.darItems().Length);
+            Assert.AreEqual(false, testTAD.ajustarFlexibilidad(true));
+            Assert.AreEqual(false, testTAD.esDinamica());
+            Assert.AreEqual(0, testTAD.darFactorCrecimiento());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(int.MaxValue / 16, testTAD.darCapacidad());
+            Assert.AreEqual(int.MaxValue / 16, testTAD.darItems().Length);
             #endregion
         }
         [TestMethod]
         public void uTestAjustarFlexibilidadCapacidadCero()
         {
             #region Configurar
-            testCola = new clsColaVector<int>(0);
+            testTAD = new clsColaVector<int>(0);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testCola.ajustarFlexibilidad(false));
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(0, testCola.darItems().Length);
+            Assert.AreEqual(false, testTAD.ajustarFlexibilidad(false));
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(0, testTAD.darItems().Length);
             #endregion
         }
         [TestMethod]
         public void uTestAjustarFlexibilidadCapacidadNormal()
         {
             #region Configurar
-            testCola = new clsColaVector<int>(500);
+            testTAD = new clsColaVector<int>(500);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testCola.ajustarFlexibilidad(false));
-            Assert.AreEqual(false, testCola.esDinamica());
-            Assert.AreEqual(0, testCola.darFactorCrecimiento());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(500, testCola.darCapacidad());
-            Assert.AreEqual(500, testCola.darItems().Length);
+            Assert.AreEqual(true, testTAD.ajustarFlexibilidad(false));
+            Assert.AreEqual(false, testTAD.esDinamica());
+            Assert.AreEqual(0, testTAD.darFactorCrecimiento());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(500, testTAD.darCapacidad());
+            Assert.AreEqual(500, testTAD.darItems().Length);
             #endregion
         }
 
@@ -813,45 +813,45 @@ namespace uTestDemoColecciones
         public void uTestAjustarFactorCrecimientoNormalEnCapacidadNormal()
         {
             #region Configurar
-            testCola = new clsColaVector<int>(500);
+            testTAD = new clsColaVector<int>(500);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testCola.ajustarFactorCrecimiento(3000));
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(3000, testCola.darFactorCrecimiento());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(500, testCola.darCapacidad());
-            Assert.AreEqual(500, testCola.darItems().Length);
+            Assert.AreEqual(true, testTAD.ajustarFactorCrecimiento(3000));
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(3000, testTAD.darFactorCrecimiento());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(500, testTAD.darCapacidad());
+            Assert.AreEqual(500, testTAD.darItems().Length);
             #endregion
         }
         [TestMethod]
         public void uTestAjustarFactorCrecimientoEnBordeEnCapacidadNormal()
         {
             #region Configurar
-            testCola = new clsColaVector<int>(500);
+            testTAD = new clsColaVector<int>(500);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testCola.ajustarFactorCrecimiento((int.MaxValue / 16) - testCola.darItems().Length));
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(int.MaxValue / 16 - testCola.darItems().Length, testCola.darFactorCrecimiento());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(500, testCola.darCapacidad());
-            Assert.AreEqual(500, testCola.darItems().Length);
+            Assert.AreEqual(true, testTAD.ajustarFactorCrecimiento((int.MaxValue / 16) - testTAD.darItems().Length));
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(int.MaxValue / 16 - testTAD.darItems().Length, testTAD.darFactorCrecimiento());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(500, testTAD.darCapacidad());
+            Assert.AreEqual(500, testTAD.darItems().Length);
             #endregion
         }
         [TestMethod]
         public void uTestAjustarFactorCrecimientoEnBordeConCapacidadEnBorde()
         {
             #region Configurar
-            testCola = new clsColaVector<int>(int.MaxValue / 16);
+            testTAD = new clsColaVector<int>(int.MaxValue / 16);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testCola.ajustarFactorCrecimiento(int.MaxValue / 16));
-            Assert.AreEqual(false, testCola.esDinamica());
-            Assert.AreEqual(0, testCola.darFactorCrecimiento());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(int.MaxValue / 16, testCola.darCapacidad());
-            Assert.AreEqual(int.MaxValue / 16, testCola.darItems().Length);
+            Assert.AreEqual(false, testTAD.ajustarFactorCrecimiento(int.MaxValue / 16));
+            Assert.AreEqual(false, testTAD.esDinamica());
+            Assert.AreEqual(0, testTAD.darFactorCrecimiento());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(int.MaxValue / 16, testTAD.darCapacidad());
+            Assert.AreEqual(int.MaxValue / 16, testTAD.darItems().Length);
             #endregion
         }
         #endregion
@@ -860,10 +860,10 @@ namespace uTestDemoColecciones
         public void uTestEsDinamica()
         {
             #region Configurar
-            testCola = new clsColaVector<int>();
+            testTAD = new clsColaVector<int>();
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testTAD.esDinamica());
             #endregion
         }
         #endregion
@@ -873,77 +873,77 @@ namespace uTestDemoColecciones
         public void uTestEncolarItemEnTADVacio()
         {
             #region Configurar
-            testCola = new clsColaVector<int>();
+            testTAD = new clsColaVector<int>();
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testCola.encolar(123));
-            Assert.AreEqual(123, testCola.darItems()[0]);
-            Assert.AreEqual(1, testCola.darLongitud());
-            Assert.AreEqual(1000, testCola.darCapacidad());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testTAD.encolar(123));
+            Assert.AreEqual(123, testTAD.darItems()[0]);
+            Assert.AreEqual(1, testTAD.darLongitud());
+            Assert.AreEqual(1000, testTAD.darCapacidad());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
+            Assert.AreEqual(true, testTAD.esDinamica());
             #endregion
         }
         [TestMethod]
         public void uTestEncolarItemEnTADConItems()
         {
             #region Configurar
-            testCola = new clsColaVector<int>();
-            testCola.encolar(123);
-            testCola.encolar(456);
-            testCola.encolar(789);
+            testTAD = new clsColaVector<int>();
+            testTAD.encolar(123);
+            testTAD.encolar(456);
+            testTAD.encolar(789);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testCola.encolar(777));
-            Assert.AreEqual(1000, testCola.darCapacidad());
-            Assert.AreEqual(4, testCola.darLongitud());
-            Assert.AreEqual(777, testCola.darItems()[3]);
-            Assert.AreEqual(789, testCola.darItems()[2]);
-            Assert.AreEqual(456, testCola.darItems()[1]);
-            Assert.AreEqual(123, testCola.darItems()[0]);
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testTAD.encolar(777));
+            Assert.AreEqual(1000, testTAD.darCapacidad());
+            Assert.AreEqual(4, testTAD.darLongitud());
+            Assert.AreEqual(777, testTAD.darItems()[3]);
+            Assert.AreEqual(789, testTAD.darItems()[2]);
+            Assert.AreEqual(456, testTAD.darItems()[1]);
+            Assert.AreEqual(123, testTAD.darItems()[0]);
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
+            Assert.AreEqual(true, testTAD.esDinamica());
             #endregion
         }
         [TestMethod]
         public void uTestEncolarItemEnTADLleno()
         {
             #region Configurar
-            testCola = new clsColaVector<int>();
+            testTAD = new clsColaVector<int>();
             testItems = new int[3];
             testItems[0] = 123;
             testItems[1] = 456;
             testItems[2] = 789;
-            testCola.ponerItems(testItems);
+            testTAD.ponerItems(testItems);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testCola.encolar(777));
-            Assert.AreEqual(1003, testCola.darCapacidad());
-            Assert.AreEqual(4, testCola.darLongitud());
-            Assert.AreEqual(123, testCola.darItems()[0]);
-            Assert.AreEqual(456, testCola.darItems()[1]);
-            Assert.AreEqual(789, testCola.darItems()[2]);
-            Assert.AreEqual(777, testCola.darItems()[3]);
-            for (int i = 4; i <= testCola.darItems().Length - 1; i++)
-                Assert.AreEqual(0, testCola.darItems()[i]);
+            Assert.AreEqual(true, testTAD.encolar(777));
+            Assert.AreEqual(1003, testTAD.darCapacidad());
+            Assert.AreEqual(4, testTAD.darLongitud());
+            Assert.AreEqual(123, testTAD.darItems()[0]);
+            Assert.AreEqual(456, testTAD.darItems()[1]);
+            Assert.AreEqual(789, testTAD.darItems()[2]);
+            Assert.AreEqual(777, testTAD.darItems()[3]);
+            for (int i = 4; i <= testTAD.darItems().Length - 1; i++)
+                Assert.AreEqual(0, testTAD.darItems()[i]);
             #endregion
         }
         [TestMethod]
         public void uTestEncolarItemEnTADLlenoEnBorde()
         {
             #region Configurar
-            testCola = new clsColaVector<int>();
+            testTAD = new clsColaVector<int>();
             testItems = new int[int.MaxValue / 16];
-            testCola.ponerItems(testItems);
+            testTAD.ponerItems(testItems);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testCola.encolar(777));
-            Assert.AreEqual(int.MaxValue / 16, testCola.darCapacidad());
-            Assert.AreEqual(int.MaxValue / 16, testCola.darLongitud());
-            Assert.AreEqual(false, testCola.esDinamica());
-            Assert.AreEqual(0, testCola.darFactorCrecimiento());
-            Assert.AreEqual(int.MaxValue / 16, testCola.darItems().Length);
-            CollectionAssert.AreEqual(testItems, testCola.darItems());
+            Assert.AreEqual(false, testTAD.encolar(777));
+            Assert.AreEqual(int.MaxValue / 16, testTAD.darCapacidad());
+            Assert.AreEqual(int.MaxValue / 16, testTAD.darLongitud());
+            Assert.AreEqual(false, testTAD.esDinamica());
+            Assert.AreEqual(0, testTAD.darFactorCrecimiento());
+            Assert.AreEqual(int.MaxValue / 16, testTAD.darItems().Length);
+            CollectionAssert.AreEqual(testItems, testTAD.darItems());
             #endregion
         }
         #endregion
@@ -952,59 +952,59 @@ namespace uTestDemoColecciones
         public void uTestDesencolarEnTADVacio()
         {
             #region Configurar
-            testCola = new clsColaVector<int>();
+            testTAD = new clsColaVector<int>();
             testItem = -1;
             #endregion 
             #region Probar y Comprobar
-            Assert.AreEqual(false, testCola.desencolar(ref testItem));
+            Assert.AreEqual(false, testTAD.desencolar(ref testItem));
             Assert.AreEqual(-1, testItem);
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(0, testCola.darItems().Length);
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(0, testTAD.darItems().Length);
             #endregion
         }
         [TestMethod]
         public void uTestDesencolarEnTADConItems()
         {
             #region Configurar
-            testCola = new clsColaVector<int>();
-            testCola.encolar(123);
-            testCola.encolar(456);
-            testCola.encolar(789);
+            testTAD = new clsColaVector<int>();
+            testTAD.encolar(123);
+            testTAD.encolar(456);
+            testTAD.encolar(789);
             testItem = 0;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testCola.desencolar(ref testItem));
+            Assert.AreEqual(true, testTAD.desencolar(ref testItem));
             Assert.AreEqual(123, testItem);
-            Assert.AreEqual(2, testCola.darLongitud());
-            Assert.AreEqual(1000, testCola.darCapacidad());
-            Assert.AreEqual(1000, testCola.darItems().Length);
-            Assert.AreEqual(456, testCola.darItems()[0]);
-            Assert.AreEqual(789, testCola.darItems()[1]);
+            Assert.AreEqual(2, testTAD.darLongitud());
+            Assert.AreEqual(1000, testTAD.darCapacidad());
+            Assert.AreEqual(1000, testTAD.darItems().Length);
+            Assert.AreEqual(456, testTAD.darItems()[0]);
+            Assert.AreEqual(789, testTAD.darItems()[1]);
             #endregion
         }
         [TestMethod]
         public void uTestDesencolarEnTADLleno()
         {
             #region Configurar
-            testCola = new clsColaVector<int>();
+            testTAD = new clsColaVector<int>();
             testItems = new int[3];
             testItems[0] = 123;
             testItems[1] = 456;
             testItems[2] = 789;
-            testCola.ponerItems(testItems);
+            testTAD.ponerItems(testItems);
             testItem = 0;
             #endregion 
             #region Probar y Comprobar
-            Assert.AreEqual(true, testCola.desencolar(ref testItem));
+            Assert.AreEqual(true, testTAD.desencolar(ref testItem));
             Assert.AreEqual(123, testItem);
-            Assert.AreEqual(2, testCola.darLongitud());
-            Assert.AreEqual(3, testCola.darCapacidad());
-            Assert.AreEqual(456, testCola.darItems()[0]);
-            Assert.AreEqual(789, testCola.darItems()[1]);
-            Assert.AreEqual(789, testCola.darItems()[2]);
+            Assert.AreEqual(2, testTAD.darLongitud());
+            Assert.AreEqual(3, testTAD.darCapacidad());
+            Assert.AreEqual(456, testTAD.darItems()[0]);
+            Assert.AreEqual(789, testTAD.darItems()[1]);
+            Assert.AreEqual(789, testTAD.darItems()[2]);
             #endregion
         }
         #endregion
@@ -1013,67 +1013,67 @@ namespace uTestDemoColecciones
         public void uTestRevisarEnTADVacio()
         {
             #region Configurar
-            testCola = new clsColaVector<int>();
+            testTAD = new clsColaVector<int>();
             testItems = new int[0];
             testItem = -1;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testCola.revisar(ref testItem));
+            Assert.AreEqual(false, testTAD.revisar(ref testItem));
             Assert.AreEqual(-1, testItem);
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
-            CollectionAssert.AreEqual(testItems, testCola.darItems());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(0, testTAD.darCapacidad());
+            Assert.AreEqual(0, testTAD.darItems().Length);
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
+            CollectionAssert.AreEqual(testItems, testTAD.darItems());
             #endregion
         }
         [TestMethod]
         public void uTestRevisarEnTADConItems()
         {
             #region Configurar
-            testCola = new clsColaVector<int>();
-            testCola.encolar(123);
-            testCola.encolar(456);
-            testCola.encolar(789);
+            testTAD = new clsColaVector<int>();
+            testTAD.encolar(123);
+            testTAD.encolar(456);
+            testTAD.encolar(789);
             testItem = -1;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testCola.revisar(ref testItem));
+            Assert.AreEqual(true, testTAD.revisar(ref testItem));
             Assert.AreEqual(123, testItem);
-            Assert.AreEqual(3, testCola.darLongitud());
-            Assert.AreEqual(1000, testCola.darCapacidad());
-            Assert.AreEqual(1000, testCola.darItems().Length);
-            Assert.AreEqual(123, testCola.darItems()[0]);
-            Assert.AreEqual(456, testCola.darItems()[1]);
-            Assert.AreEqual(789, testCola.darItems()[2]);
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
+            Assert.AreEqual(3, testTAD.darLongitud());
+            Assert.AreEqual(1000, testTAD.darCapacidad());
+            Assert.AreEqual(1000, testTAD.darItems().Length);
+            Assert.AreEqual(123, testTAD.darItems()[0]);
+            Assert.AreEqual(456, testTAD.darItems()[1]);
+            Assert.AreEqual(789, testTAD.darItems()[2]);
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
             #endregion
         }
         [TestMethod]
         public void uTestRevisarEnTADLleno()
         {
             #region Configurar
-            testCola = new clsColaVector<int>();
+            testTAD = new clsColaVector<int>();
             testItems = new int[3];
             testItems[0] = 123;
             testItems[1] = 456;
             testItems[2] = 789;
-            testCola.ponerItems(testItems);
+            testTAD.ponerItems(testItems);
             testItem = 0;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testCola.revisar(ref testItem));
+            Assert.AreEqual(true, testTAD.revisar(ref testItem));
             Assert.AreEqual(123, testItem);
-            Assert.AreEqual(3, testCola.darLongitud());
-            Assert.AreEqual(3, testCola.darCapacidad());
-            Assert.AreEqual(3, testCola.darItems().Length);
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
-            Assert.AreEqual(123, testCola.darItems()[0]);
-            Assert.AreEqual(456, testCola.darItems()[1]);
-            Assert.AreEqual(789, testCola.darItems()[2]);
+            Assert.AreEqual(3, testTAD.darLongitud());
+            Assert.AreEqual(3, testTAD.darCapacidad());
+            Assert.AreEqual(3, testTAD.darItems().Length);
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
+            Assert.AreEqual(123, testTAD.darItems()[0]);
+            Assert.AreEqual(456, testTAD.darItems()[1]);
+            Assert.AreEqual(789, testTAD.darItems()[2]);
             #endregion
         }
         #endregion
@@ -1082,40 +1082,40 @@ namespace uTestDemoColecciones
         public void testReversarConTADSemilleno()
         {
             #region Inicializar
-            testCola = new clsColaVector<int>(5);
-            testCola.encolar(1);
-            testCola.encolar(2);
-            testCola.encolar(3);
-            testCola.encolar(4);
+            testTAD = new clsColaVector<int>(5);
+            testTAD.encolar(1);
+            testTAD.encolar(2);
+            testTAD.encolar(3);
+            testTAD.encolar(4);
             testItems = new int[5] { 4, 3, 2, 1, 0 };
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testCola.reversar());
-            Assert.AreEqual(4, testCola.darLongitud());
-            Assert.AreEqual(5, testCola.darCapacidad());
-            Assert.AreEqual(5, testCola.darItems().Length);
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
-            CollectionAssert.AreEqual(testItems, testCola.darItems());
+            Assert.AreEqual(true, testTAD.reversar());
+            Assert.AreEqual(4, testTAD.darLongitud());
+            Assert.AreEqual(5, testTAD.darCapacidad());
+            Assert.AreEqual(5, testTAD.darItems().Length);
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
+            CollectionAssert.AreEqual(testItems, testTAD.darItems());
             #endregion
         }
         [TestMethod]
         public void testReversarConTADLleno()
         {
             #region Inicializar
-            testCola = new clsColaVector<int>(4);
+            testTAD = new clsColaVector<int>(4);
             testItems = new int[4] { 1, 2, 3, 4 };
-            testCola.ponerItems(testItems);
+            testTAD.ponerItems(testItems);
             testItems = new int[4] { 4, 3, 2, 1 };
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testCola.reversar());
-            Assert.AreEqual(4, testCola.darLongitud());
-            Assert.AreEqual(4, testCola.darCapacidad());
-            Assert.AreEqual(4, testCola.darItems().Length);
-            Assert.AreEqual(true, testCola.esDinamica());
-            Assert.AreEqual(1000, testCola.darFactorCrecimiento());
-            CollectionAssert.AreEqual(testItems, testCola.darItems());
+            Assert.AreEqual(true, testTAD.reversar());
+            Assert.AreEqual(4, testTAD.darLongitud());
+            Assert.AreEqual(4, testTAD.darCapacidad());
+            Assert.AreEqual(4, testTAD.darItems().Length);
+            Assert.AreEqual(true, testTAD.esDinamica());
+            Assert.AreEqual(1000, testTAD.darFactorCrecimiento());
+            CollectionAssert.AreEqual(testItems, testTAD.darItems());
             #endregion
         }
         [TestMethod]
@@ -1123,15 +1123,15 @@ namespace uTestDemoColecciones
         {
             #region Inicializar
             testItems = new int[4] { 0, 0, 0, 0 };
-            testCola = new clsColaVector<int>(4);
+            testTAD = new clsColaVector<int>(4);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testCola.reversar());
-            Assert.AreEqual(0, testCola.darLongitud());
-            Assert.AreEqual(4, testCola.darCapacidad());
-            Assert.AreEqual(4, testCola.darItems().Length);
-            Assert.AreEqual(true, testCola.esDinamica());
-            CollectionAssert.AreEqual(testItems, testCola.darItems());
+            Assert.AreEqual(false, testTAD.reversar());
+            Assert.AreEqual(0, testTAD.darLongitud());
+            Assert.AreEqual(4, testTAD.darCapacidad());
+            Assert.AreEqual(4, testTAD.darItems().Length);
+            Assert.AreEqual(true, testTAD.esDinamica());
+            CollectionAssert.AreEqual(testItems, testTAD.darItems());
             #endregion
         }
         #endregion

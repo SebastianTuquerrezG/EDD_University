@@ -6,6 +6,7 @@ namespace Servicios.Colecciones.Enlazadas
 {
     public class clsPilaEnlazada<Tipo> : iPila<Tipo> where Tipo : IComparable
     {
+
         #region Atributos
         private int atrLongitud;
         private clsNodoEnlazado<Tipo> atrPrimero;
@@ -18,27 +19,63 @@ namespace Servicios.Colecciones.Enlazadas
         #region Metodos
 
         #region Accesores
-        public Tipo[] darItems() { return atrItems; }
         public int darLongitud() { return atrLongitud; }
-        public clsNodoEnlazado<Tipo> darPrimero() { return atrPrimero; }
+        public Tipo[] darItems() { return atrItems; }
         public clsNodoEnlazado<Tipo> darUltimo() { return atrUltimo; }
+        public clsNodoEnlazado<Tipo> darPrimero() { return atrPrimero; }
         #endregion
 
         #region Mutadores
-        public bool ponerItems(Tipo[] prmItems)
+        public bool ponerItems(Tipo[] prmVector)
         {
-            throw new NotImplementedException();
+            if (prmVector.Length > int.MaxValue / 16) { return false; }
+            atrItems = prmVector;
+            atrLongitud = prmVector.Length;
+            return true;
         }
         #endregion
 
         #region CRUDs
         public bool apilar(Tipo prmItem)
         {
-            throw new NotImplementedException();
+            if (atrLongitud == 0)
+            {
+                atrItems = new Tipo[1];
+                atrLongitud++;
+                atrItems[0] = prmItem;
+                return true;
+            }
+            if (atrItems.Length == int.MaxValue / 16)
+            {
+                return false;
+            }
+            atrImagenes = atrItems;
+            atrItems = new Tipo[atrImagenes.Length + 1];
+            for (int i = 0; i < atrItems.Length - 1; i++)
+            {
+                atrImagen = atrImagenes[atrImagenes.Length - 1 - i];
+                atrItems[atrImagenes.Length - i] = atrImagen;
+            }
+            atrItems[0] = prmItem;
+            atrLongitud++;
+            return true;
         }
         public bool desapilar(ref Tipo prmItem)
         {
-            throw new NotImplementedException();
+            if (atrItems == null)
+            {
+                return false;
+            }
+            prmItem = atrItems[0];
+            atrImagenes = atrItems;
+            atrItems = new Tipo[atrImagenes.Length - 1];
+            for (int i = atrItems.Length; i > 0; i--)
+            {
+                atrImagen = atrImagenes[atrItems.Length + 1 - i];
+                atrItems[atrItems.Length - i] = atrImagen;
+            }
+            atrLongitud--;
+            return true;
         }
         public bool revisar(ref Tipo prmItem)
         {
@@ -72,14 +109,7 @@ namespace Servicios.Colecciones.Enlazadas
                 return true;
             }
         }
-        public bool eliminar_ult()
-        {
-            for (int i = 1; i < atrLongitud; i++)
-                atrItems[i - 1] = atrItems[i];
-            return true;
-        }
         #endregion
-
         #endregion
     }
 }

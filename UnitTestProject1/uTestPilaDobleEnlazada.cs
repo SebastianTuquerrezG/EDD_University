@@ -23,7 +23,7 @@ namespace uTestDemoColecciones
             #endregion
             #region Probar y Comprobar
             testTAD = new clsPilaDobleEnlazada<int>();
-            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(null, testTAD.darItems());
             Assert.AreEqual(0, testTAD.darLongitud());
             Assert.AreEqual(null, testTAD.darPrimero());
             Assert.AreEqual(null, testTAD.darUltimo());
@@ -70,7 +70,7 @@ namespace uTestDemoColecciones
             testItems = new int[0];
             #endregion
             #region Probar y Comprobar
-            Assert.AreNotEqual(false, testTAD.ponerItems(testItems));
+            Assert.AreEqual(false, testTAD.ponerItems(testItems));
             Assert.AreEqual(0, testTAD.darLongitud());
             Assert.AreEqual(null, testTAD.darPrimero());
             Assert.AreEqual(null, testTAD.darUltimo());
@@ -243,7 +243,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(true, testTAD.revisar(ref testItem));
             Assert.AreEqual(123, testItem);
             Assert.AreEqual(3, testTAD.darLongitud());
-            Assert.AreEqual(1000, testTAD.darItems().Length);
+            Assert.AreEqual(3, testTAD.darItems().Length);
             Assert.AreEqual(123, testTAD.darItems()[0]);
             Assert.AreEqual(456, testTAD.darItems()[1]);
             Assert.AreEqual(789, testTAD.darItems()[2]);

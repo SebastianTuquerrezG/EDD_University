@@ -23,7 +23,7 @@ namespace uTestDemoColecciones
             #endregion
             #region Probar y Comprobar
             testTAD = new clsPilaEnlazada<int>();
-            Assert.AreNotEqual(null, testTAD.darItems());
+            Assert.AreEqual(null, testTAD.darItems());
             Assert.AreEqual(0, testTAD.darLongitud());
             Assert.AreEqual(null, testTAD.darPrimero());
             Assert.AreEqual(null, testTAD.darUltimo());

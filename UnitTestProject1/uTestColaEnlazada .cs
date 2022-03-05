@@ -246,7 +246,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(true, testTAD.revisar(ref testItem));
             Assert.AreEqual(123, testItem);
             Assert.AreEqual(3, testTAD.darLongitud());
-            Assert.AreEqual(3, testTAD.darItems());
+            Assert.AreEqual(3, testTAD.darItems().Length);
             CollectionAssert.AreEqual(testItems, testTAD.darItems());
             #endregion
         }
@@ -277,7 +277,7 @@ namespace uTestDemoColecciones
             #region Probar y Comprobar
             Assert.AreEqual(false, testTAD.reversar());
             Assert.AreEqual(0, testTAD.darLongitud());
-            Assert.AreEqual(null, testTAD.darItems().Length);
+            Assert.AreEqual(null, testTAD.darItems());
             #endregion
         }
         #endregion
