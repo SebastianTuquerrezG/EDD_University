@@ -83,11 +83,11 @@ namespace uTestDemoColeccciones
             #region Configurar 
             #endregion
             #region Probar y Comprobar
-            testLista = new clsListaVector<int>(int.MaxValue / 16);
+            testLista = new clsListaVector<int>(int.MaxValue / 64);
             Assert.AreNotEqual(null, testLista.darItems());
             Assert.AreEqual(0, testLista.darLongitud());
-            Assert.AreEqual(int.MaxValue / 16, testLista.darItems().Length);
-            Assert.AreEqual(int.MaxValue / 16, testLista.darCapacidad());
+            Assert.AreEqual(int.MaxValue / 64, testLista.darItems().Length);
+            Assert.AreEqual(int.MaxValue / 64, testLista.darCapacidad());
             Assert.AreEqual(false, testLista.esDinamica());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             #endregion
@@ -98,7 +98,7 @@ namespace uTestDemoColeccciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testLista = new clsListaVector<int>(int.MaxValue / 16 + 1);
+            testLista = new clsListaVector<int>(int.MaxValue / 64 + 1);
             Assert.AreNotEqual(null, testLista.darItems());
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
@@ -235,7 +235,7 @@ namespace uTestDemoColeccciones
             #region Configurar 
             #endregion
             #region Probar y Comprobar
-            testLista = new clsListaVector<int>(int.MaxValue / 16 + 1, false);
+            testLista = new clsListaVector<int>(int.MaxValue / 64 + 1, false);
             Assert.AreNotEqual(null, testLista.darItems());
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
@@ -327,7 +327,7 @@ namespace uTestDemoColeccciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testLista = new clsListaVector<int>(-100, int.MaxValue / 16 + 1);
+            testLista = new clsListaVector<int>(-100, int.MaxValue / 64 + 1);
             Assert.AreNotEqual(null, testLista.darItems());
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
@@ -388,7 +388,7 @@ namespace uTestDemoColeccciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testLista = new clsListaVector<int>(0, int.MaxValue / 16 + 1);
+            testLista = new clsListaVector<int>(0, int.MaxValue / 64 + 1);
             Assert.AreNotEqual(null, testLista.darItems());
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
@@ -449,7 +449,7 @@ namespace uTestDemoColeccciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testLista = new clsListaVector<int>(500, int.MaxValue / 16 + 1);
+            testLista = new clsListaVector<int>(500, int.MaxValue / 64 + 1);
             Assert.AreNotEqual(null, testLista.darItems());
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
@@ -465,7 +465,7 @@ namespace uTestDemoColeccciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testLista = new clsListaVector<int>(int.MaxValue / 16, -1);
+            testLista = new clsListaVector<int>(int.MaxValue / 64, -1);
             Assert.AreNotEqual(null, testLista.darItems());
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
@@ -480,11 +480,11 @@ namespace uTestDemoColeccciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testLista = new clsListaVector<int>(int.MaxValue / 16, 0);
+            testLista = new clsListaVector<int>(int.MaxValue / 64, 0);
             Assert.AreNotEqual(null, testLista.darItems());
             Assert.AreEqual(0, testLista.darLongitud());
-            Assert.AreEqual(int.MaxValue / 16, testLista.darItems().Length);
-            Assert.AreEqual(int.MaxValue / 16, testLista.darCapacidad());
+            Assert.AreEqual(int.MaxValue / 64, testLista.darItems().Length);
+            Assert.AreEqual(int.MaxValue / 64, testLista.darCapacidad());
             Assert.AreEqual(false, testLista.esDinamica());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             #endregion
@@ -495,7 +495,7 @@ namespace uTestDemoColeccciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testLista = new clsListaVector<int>(int.MaxValue / 16, 500);
+            testLista = new clsListaVector<int>(int.MaxValue / 64, 500);
             Assert.AreNotEqual(null, testLista.darItems());
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
@@ -510,7 +510,7 @@ namespace uTestDemoColeccciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testLista = new clsListaVector<int>(int.MaxValue / 16, int.MaxValue / 16 + 1);
+            testLista = new clsListaVector<int>(int.MaxValue / 64, int.MaxValue / 64 + 1);
             Assert.AreNotEqual(null, testLista.darItems());
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
@@ -526,7 +526,7 @@ namespace uTestDemoColeccciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testLista = new clsListaVector<int>(int.MaxValue / 16 + 1, -1);
+            testLista = new clsListaVector<int>(int.MaxValue / 64 + 1, -1);
             Assert.AreNotEqual(null, testLista.darItems());
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
@@ -541,7 +541,7 @@ namespace uTestDemoColeccciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testLista = new clsListaVector<int>(int.MaxValue / 16 + 1, 0);
+            testLista = new clsListaVector<int>(int.MaxValue / 64 + 1, 0);
             Assert.AreNotEqual(null, testLista.darItems());
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
@@ -556,7 +556,7 @@ namespace uTestDemoColeccciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testLista = new clsListaVector<int>(int.MaxValue / 16 + 1, 500);
+            testLista = new clsListaVector<int>(int.MaxValue / 64 + 1, 500);
             Assert.AreNotEqual(null, testLista.darItems());
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
@@ -571,7 +571,7 @@ namespace uTestDemoColeccciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testLista = new clsListaVector<int>(int.MaxValue / 16 + 1, int.MaxValue / 16 + 1);
+            testLista = new clsListaVector<int>(int.MaxValue / 64 + 1, int.MaxValue / 64 + 1);
             Assert.AreNotEqual(null, testLista.darItems());
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
@@ -632,7 +632,7 @@ namespace uTestDemoColeccciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testLista = new clsListaVector<int>(int.MaxValue, int.MaxValue / 16 + 1);
+            testLista = new clsListaVector<int>(int.MaxValue, int.MaxValue / 64 + 1);
             Assert.AreNotEqual(null, testLista.darItems());
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
@@ -683,16 +683,16 @@ namespace uTestDemoColeccciones
         {
             #region Configurar
             testLista = new clsListaVector<int>();
-            testItems = new int[int.MaxValue / 16];
+            testItems = new int[int.MaxValue / 64];
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(true, testLista.ponerItems(testItems));
-            Assert.AreEqual(int.MaxValue / 16, testLista.darCapacidad());
-            Assert.AreEqual(int.MaxValue / 16, testLista.darLongitud());
-            Assert.AreEqual(int.MaxValue / 16, testLista.darItems().Length);
+            Assert.AreEqual(int.MaxValue / 64, testLista.darCapacidad());
+            Assert.AreEqual(int.MaxValue / 64, testLista.darLongitud());
+            Assert.AreEqual(int.MaxValue / 64, testLista.darItems().Length);
             Assert.AreEqual(false, testLista.esDinamica());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
-            for (int varIterador = 0; varIterador < int.MaxValue / 16; varIterador++)
+            for (int varIterador = 0; varIterador < int.MaxValue / 64; varIterador++)
                 Assert.AreEqual(0, testLista.darItems()[varIterador]);
             #endregion
         }
@@ -701,7 +701,7 @@ namespace uTestDemoColeccciones
         {
             #region Configurar
             testLista = new clsListaVector<int>();
-            testItems = new int[int.MaxValue / 16 + 1];
+            testItems = new int[int.MaxValue / 64 + 1];
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(false, testLista.ponerItems(testItems));
@@ -715,15 +715,15 @@ namespace uTestDemoColeccciones
         public void uTestAjustarFlexibilidadCapacidadEnBorde()
         {
             #region Configurar
-            testLista = new clsListaVector<int>(int.MaxValue / 16);
+            testLista = new clsListaVector<int>(int.MaxValue / 64);
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(false, testLista.ajustarFlexibilidad(true));
             Assert.AreEqual(false, testLista.esDinamica());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             Assert.AreEqual(0, testLista.darLongitud());
-            Assert.AreEqual(int.MaxValue / 16, testLista.darCapacidad());
-            Assert.AreEqual(int.MaxValue / 16, testLista.darItems().Length);
+            Assert.AreEqual(int.MaxValue / 64, testLista.darCapacidad());
+            Assert.AreEqual(int.MaxValue / 64, testLista.darItems().Length);
             #endregion
         }
         [TestMethod]
@@ -779,9 +779,9 @@ namespace uTestDemoColeccciones
             testLista = new clsListaVector<int>(500);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.ajustarFactorCrecimiento((int.MaxValue / 16) - testLista.darItems().Length));
+            Assert.AreEqual(true, testLista.ajustarFactorCrecimiento((int.MaxValue / 64) - testLista.darItems().Length));
             Assert.AreEqual(true, testLista.esDinamica());
-            Assert.AreEqual((int.MaxValue / 16) - testLista.darItems().Length, testLista.darFactorCrecimiento());
+            Assert.AreEqual((int.MaxValue / 64) - testLista.darItems().Length, testLista.darFactorCrecimiento());
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(500, testLista.darCapacidad());
             Assert.AreEqual(500, testLista.darItems().Length);
@@ -791,15 +791,15 @@ namespace uTestDemoColeccciones
         public void uTestAjustarFactorCrecimientoEnBordeConCapacidadEnBorde()
         {
             #region Configurar
-            testLista = new clsListaVector<int>(int.MaxValue / 16);
+            testLista = new clsListaVector<int>(int.MaxValue / 64);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.ajustarFactorCrecimiento(int.MaxValue / 16));
+            Assert.AreEqual(false, testLista.ajustarFactorCrecimiento(int.MaxValue / 64));
             Assert.AreEqual(false, testLista.esDinamica());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             Assert.AreEqual(0, testLista.darLongitud());
-            Assert.AreEqual(int.MaxValue / 16, testLista.darCapacidad());
-            Assert.AreEqual(int.MaxValue / 16, testLista.darItems().Length);
+            Assert.AreEqual(int.MaxValue / 64, testLista.darCapacidad());
+            Assert.AreEqual(int.MaxValue / 64, testLista.darItems().Length);
             #endregion
         }
         #endregion
@@ -923,14 +923,14 @@ namespace uTestDemoColeccciones
         {
             #region Configurar
             testLista = new clsListaVector<int>();
-            testItems = new int[int.MaxValue / 16];
+            testItems = new int[int.MaxValue / 64];
             testLista.ponerItems(testItems);
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(false, testLista.agregar(777));
-            Assert.AreEqual(int.MaxValue / 16, testLista.darLongitud());
-            Assert.AreEqual(int.MaxValue / 16, testLista.darCapacidad());
-            Assert.AreEqual(int.MaxValue / 16, testLista.darItems().Length);
+            Assert.AreEqual(int.MaxValue / 64, testLista.darLongitud());
+            Assert.AreEqual(int.MaxValue / 64, testLista.darCapacidad());
+            Assert.AreEqual(int.MaxValue / 64, testLista.darItems().Length);
             Assert.AreEqual(false, testLista.esDinamica());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());

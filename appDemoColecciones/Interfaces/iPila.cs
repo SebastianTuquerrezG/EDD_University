@@ -11,6 +11,5 @@ namespace Servicios.Colecciones.Interfaces //Empaquetamos en un lugar que sabemo
         bool apilar(Tipo prmItem); //Pila por pila
         bool desapilar(ref Tipo prmItem); 
         bool revisar(ref Tipo prmItem); //revisar todo lo que pasa, o entra
-        bool reversar();
     }
 }

@@ -1,115 +1,29 @@
 ﻿using System;
 using Servicios.Colecciones.Interfaces;
 using Servicios.Colecciones.Nodos;
+using Servicios.Colecciones.Tads;
 
 namespace Servicios.Colecciones.Enlazadas
 {
-    public class clsPilaEnlazada<Tipo> : iPila<Tipo> where Tipo : IComparable
+    public class clsPilaEnlazada<Tipo> : clsTADEnlazado<Tipo>, iPila<Tipo> where Tipo : IComparable
     {
-
-        #region Atributos
-        private int atrLongitud;
-        private clsNodoEnlazado<Tipo> atrPrimero;
-        private clsNodoEnlazado<Tipo> atrUltimo;
-        private Tipo[] atrItems;
-        private Tipo atrImagen;
-        private Tipo[] atrImagenes;
-        #endregion
-
-        #region Metodos
-
-        #region Accesores
-        public int darLongitud() { return atrLongitud; }
-        public Tipo[] darItems() { return atrItems; }
-        public clsNodoEnlazado<Tipo> darUltimo() { return atrUltimo; }
-        public clsNodoEnlazado<Tipo> darPrimero() { return atrPrimero; }
-        #endregion
-
-        #region Mutadores
-        public bool ponerItems(Tipo[] prmVector)
-        {
-            if (prmVector.Length > int.MaxValue / 16) { return false; }
-            atrItems = prmVector;
-            atrLongitud = prmVector.Length;
-            return true;
-        }
+        #region Constructores
+        public clsPilaEnlazada():base() { }
         #endregion
 
         #region CRUDs
         public bool apilar(Tipo prmItem)
         {
-            if (atrLongitud == 0)
-            {
-                atrItems = new Tipo[1];
-                atrLongitud++;
-                atrItems[0] = prmItem;
-                return true;
-            }
-            if (atrItems.Length == int.MaxValue / 16)
-            {
-                return false;
-            }
-            atrImagenes = atrItems;
-            atrItems = new Tipo[atrImagenes.Length + 1];
-            for (int i = 0; i < atrItems.Length - 1; i++)
-            {
-                atrImagen = atrImagenes[atrImagenes.Length - 1 - i];
-                atrItems[atrImagenes.Length - i] = atrImagen;
-            }
-            atrItems[0] = prmItem;
-            atrLongitud++;
-            return true;
+            return insertar(prmItem, 0);
         }
         public bool desapilar(ref Tipo prmItem)
         {
-            if (atrItems == null)
-            {
-                return false;
-            }
-            prmItem = atrItems[0];
-            atrImagenes = atrItems;
-            atrItems = new Tipo[atrImagenes.Length - 1];
-            for (int i = atrItems.Length; i > 0; i--)
-            {
-                atrImagen = atrImagenes[atrItems.Length + 1 - i];
-                atrItems[atrItems.Length - i] = atrImagen;
-            }
-            atrLongitud--;
-            return true;
+            return extraer(ref prmItem, 0);
         }
         public bool revisar(ref Tipo prmItem)
         {
-            if (atrLongitud != 0)
-            {
-                for (int i = 0; i <= atrLongitud; i++)
-                {
-                    prmItem = atrItems[i];
-
-                    return true;
-                }
-            }
-
-            return false;
+            return recuperar(ref prmItem, 0);
         }
-        public bool reversar()
-        {
-            if (atrLongitud == 0)
-            {
-                return false;
-            }
-            else
-            {
-                atrImagenes = atrItems;
-                atrItems = new Tipo[atrImagenes.Length];
-                for (int i = atrLongitud, j = 0; i > 0; j++, i--)
-                {
-                    atrImagen = atrImagenes[i - 1];
-                    atrItems[j] = atrImagen;
-                }
-                return true;
-            }
-        }
-        #endregion
         #endregion
     }
 }

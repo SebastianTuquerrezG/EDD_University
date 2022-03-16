@@ -7,6 +7,5 @@ namespace Servicios.Colecciones.Interfaces
         bool encolar(Tipo prmItem);  //prm -> POR PARAMETRO
         bool desencolar(ref Tipo prmItem);
         bool revisar(ref Tipo prmItem);
-        bool reversar();
     }
 }

@@ -13,8 +13,5 @@ namespace Servicios.Colecciones.Interfaces
         bool extraerEn(int prmIndice, ref Tipo prmItem);
         bool modificarEn(int prmIndice, Tipo prmItem);
         bool recuperarEn(int prmIndice, ref Tipo prmItem);
-        bool contieneA(Tipo prmItem);
-        int encontrarA(Tipo prmItem);
-        bool reversar();
     }
 }

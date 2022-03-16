@@ -84,11 +84,11 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar 
-            testTAD = new clsColaVector<int>(int.MaxValue / 16);
+            testTAD = new clsColaVector<int>(int.MaxValue / 64);
             Assert.AreNotEqual(null, testTAD.darItems());
             Assert.AreEqual(0, testTAD.darLongitud());
-            Assert.AreEqual(int.MaxValue / 16, testTAD.darItems().Length);
-            Assert.AreEqual(int.MaxValue / 16, testTAD.darCapacidad());
+            Assert.AreEqual(int.MaxValue / 64, testTAD.darItems().Length);
+            Assert.AreEqual(int.MaxValue / 64, testTAD.darCapacidad());
             Assert.AreEqual(false, testTAD.esDinamica());
             Assert.AreEqual(0, testTAD.darFactorCrecimiento());
             #endregion
@@ -99,7 +99,7 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testTAD = new clsColaVector<int>(int.MaxValue / 16 + 1);
+            testTAD = new clsColaVector<int>(int.MaxValue / 64 + 1);
             Assert.AreNotEqual(null, testTAD.darItems());
             Assert.AreEqual(0, testTAD.darLongitud());
             Assert.AreEqual(0, testTAD.darItems().Length);
@@ -221,7 +221,7 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testTAD = new clsColaVector<int>(int.MaxValue / 16 + 1, true);
+            testTAD = new clsColaVector<int>(int.MaxValue / 64 + 1, true);
             Assert.AreNotEqual(null, testTAD.darItems());
             Assert.AreEqual(0, testTAD.darLongitud());
             Assert.AreEqual(0, testTAD.darItems().Length);
@@ -236,7 +236,7 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testTAD = new clsColaVector<int>(int.MaxValue / 16 + 1, false);
+            testTAD = new clsColaVector<int>(int.MaxValue / 64 + 1, false);
             Assert.AreNotEqual(null, testTAD.darItems());
             Assert.AreEqual(0, testTAD.darLongitud());
             Assert.AreEqual(0, testTAD.darItems().Length);
@@ -328,7 +328,7 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testTAD = new clsColaVector<int>(-100, int.MaxValue / 16 + 1);
+            testTAD = new clsColaVector<int>(-100, int.MaxValue / 64 + 1);
             Assert.AreNotEqual(null, testTAD.darItems());
             Assert.AreEqual(0, testTAD.darLongitud());
             Assert.AreEqual(0, testTAD.darItems().Length);
@@ -389,7 +389,7 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testTAD = new clsColaVector<int>(0, int.MaxValue / 16 + 1);
+            testTAD = new clsColaVector<int>(0, int.MaxValue / 64 + 1);
             Assert.AreNotEqual(null, testTAD.darItems());
             Assert.AreEqual(0, testTAD.darLongitud());
             Assert.AreEqual(0, testTAD.darItems().Length);
@@ -450,7 +450,7 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testTAD = new clsColaVector<int>(500, int.MaxValue / 16 + 1);
+            testTAD = new clsColaVector<int>(500, int.MaxValue / 64 + 1);
             Assert.AreNotEqual(null, testTAD.darItems());
             Assert.AreEqual(0, testTAD.darLongitud());
             Assert.AreEqual(0, testTAD.darItems().Length);
@@ -466,7 +466,7 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testTAD = new clsColaVector<int>(int.MaxValue / 16, -1);
+            testTAD = new clsColaVector<int>(int.MaxValue / 64, -1);
             Assert.AreNotEqual(null, testTAD.darItems());
             Assert.AreEqual(0, testTAD.darLongitud());
             Assert.AreEqual(0, testTAD.darItems().Length);
@@ -481,11 +481,11 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testTAD = new clsColaVector<int>(int.MaxValue / 16, 0);
+            testTAD = new clsColaVector<int>(int.MaxValue / 64, 0);
             Assert.AreNotEqual(null, testTAD.darItems());
             Assert.AreEqual(0, testTAD.darLongitud());
-            Assert.AreEqual(int.MaxValue / 16, testTAD.darItems().Length);
-            Assert.AreEqual(int.MaxValue / 16, testTAD.darCapacidad());
+            Assert.AreEqual(int.MaxValue / 64, testTAD.darItems().Length);
+            Assert.AreEqual(int.MaxValue / 64, testTAD.darCapacidad());
             Assert.AreEqual(false, testTAD.esDinamica());
             Assert.AreEqual(0, testTAD.darFactorCrecimiento());
             #endregion
@@ -496,7 +496,7 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testTAD = new clsColaVector<int>(int.MaxValue / 16, 500);
+            testTAD = new clsColaVector<int>(int.MaxValue / 64, 500);
             Assert.AreNotEqual(null, testTAD.darItems());
             Assert.AreEqual(0, testTAD.darLongitud());
             Assert.AreEqual(0, testTAD.darItems().Length);
@@ -511,7 +511,7 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testTAD = new clsColaVector<int>(int.MaxValue / 16, int.MaxValue / 16 + 1);
+            testTAD = new clsColaVector<int>(int.MaxValue / 64, int.MaxValue / 64 + 1);
             Assert.AreNotEqual(null, testTAD.darItems());
             Assert.AreEqual(0, testTAD.darLongitud());
             Assert.AreEqual(0, testTAD.darItems().Length);
@@ -527,7 +527,7 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testTAD = new clsColaVector<int>(int.MaxValue / 16 + 1, -1);
+            testTAD = new clsColaVector<int>(int.MaxValue / 64 + 1, -1);
             Assert.AreNotEqual(null, testTAD.darItems());
             Assert.AreEqual(0, testTAD.darLongitud());
             Assert.AreEqual(0, testTAD.darItems().Length);
@@ -542,7 +542,7 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testTAD = new clsColaVector<int>(int.MaxValue / 16 + 1, 0);
+            testTAD = new clsColaVector<int>(int.MaxValue / 64 + 1, 0);
             Assert.AreNotEqual(null, testTAD.darItems());
             Assert.AreEqual(0, testTAD.darLongitud());
             Assert.AreEqual(0, testTAD.darItems().Length);
@@ -557,7 +557,7 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testTAD = new clsColaVector<int>(int.MaxValue / 16 + 1, 500);
+            testTAD = new clsColaVector<int>(int.MaxValue / 64 + 1, 500);
             Assert.AreNotEqual(null, testTAD.darItems());
             Assert.AreEqual(0, testTAD.darLongitud());
             Assert.AreEqual(0, testTAD.darItems().Length);
@@ -572,7 +572,7 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testTAD = new clsColaVector<int>(int.MaxValue / 16 + 1, int.MaxValue / 16 + 1);
+            testTAD = new clsColaVector<int>(int.MaxValue / 64 + 1, int.MaxValue / 64 + 1);
             Assert.AreNotEqual(null, testTAD.darItems());
             Assert.AreEqual(0, testTAD.darLongitud());
             Assert.AreEqual(0, testTAD.darItems().Length);
@@ -633,7 +633,7 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testTAD = new clsColaVector<int>(int.MaxValue, int.MaxValue / 16 + 1);
+            testTAD = new clsColaVector<int>(int.MaxValue, int.MaxValue / 64 + 1);
             Assert.AreNotEqual(null, testTAD.darItems());
             Assert.AreEqual(0, testTAD.darLongitud());
             Assert.AreEqual(0, testTAD.darItems().Length);
@@ -735,16 +735,16 @@ namespace uTestDemoColecciones
         {
             #region Configurar
             testTAD = new clsColaVector<int>();
-            testItems = new int[int.MaxValue / 16];
+            testItems = new int[int.MaxValue / 64];
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(true, testTAD.ponerItems(testItems));
-            Assert.AreEqual(int.MaxValue / 16, testTAD.darCapacidad());
-            Assert.AreEqual(int.MaxValue / 16, testTAD.darLongitud());
-            Assert.AreEqual(int.MaxValue / 16, testTAD.darItems().Length);
+            Assert.AreEqual(int.MaxValue / 64, testTAD.darCapacidad());
+            Assert.AreEqual(int.MaxValue / 64, testTAD.darLongitud());
+            Assert.AreEqual(int.MaxValue / 64, testTAD.darItems().Length);
             Assert.AreEqual(false, testTAD.esDinamica());
             Assert.AreEqual(0, testTAD.darFactorCrecimiento());
-            for (int varIterador = 0; varIterador < int.MaxValue / 16; varIterador++)
+            for (int varIterador = 0; varIterador < int.MaxValue / 64; varIterador++)
                 Assert.AreEqual(0, testTAD.darItems()[varIterador]);         
             #endregion
         }
@@ -753,7 +753,7 @@ namespace uTestDemoColecciones
         {
             #region Configurar
             testTAD = new clsColaVector<int>();
-            testItems = new int[int.MaxValue / 16 + 1];
+            testItems = new int[int.MaxValue / 64 + 1];
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(false, testTAD.ponerItems(testItems));
@@ -767,15 +767,15 @@ namespace uTestDemoColecciones
         public void uTestAjustarFlexibilidadCapacidadEnBorde()
         {
             #region Configurar
-            testTAD = new clsColaVector<int>(int.MaxValue / 16);
+            testTAD = new clsColaVector<int>(int.MaxValue / 64);
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(false, testTAD.ajustarFlexibilidad(true));
             Assert.AreEqual(false, testTAD.esDinamica());
             Assert.AreEqual(0, testTAD.darFactorCrecimiento());
             Assert.AreEqual(0, testTAD.darLongitud());
-            Assert.AreEqual(int.MaxValue / 16, testTAD.darCapacidad());
-            Assert.AreEqual(int.MaxValue / 16, testTAD.darItems().Length);
+            Assert.AreEqual(int.MaxValue / 64, testTAD.darCapacidad());
+            Assert.AreEqual(int.MaxValue / 64, testTAD.darItems().Length);
             #endregion
         }
         [TestMethod]
@@ -831,9 +831,9 @@ namespace uTestDemoColecciones
             testTAD = new clsColaVector<int>(500);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testTAD.ajustarFactorCrecimiento((int.MaxValue / 16) - testTAD.darItems().Length));
+            Assert.AreEqual(true, testTAD.ajustarFactorCrecimiento((int.MaxValue / 64) - testTAD.darItems().Length));
             Assert.AreEqual(true, testTAD.esDinamica());
-            Assert.AreEqual(int.MaxValue / 16 - testTAD.darItems().Length, testTAD.darFactorCrecimiento());
+            Assert.AreEqual(int.MaxValue / 64 - testTAD.darItems().Length, testTAD.darFactorCrecimiento());
             Assert.AreEqual(0, testTAD.darLongitud());
             Assert.AreEqual(500, testTAD.darCapacidad());
             Assert.AreEqual(500, testTAD.darItems().Length);
@@ -843,15 +843,15 @@ namespace uTestDemoColecciones
         public void uTestAjustarFactorCrecimientoEnBordeConCapacidadEnBorde()
         {
             #region Configurar
-            testTAD = new clsColaVector<int>(int.MaxValue / 16);
+            testTAD = new clsColaVector<int>(int.MaxValue / 64);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testTAD.ajustarFactorCrecimiento(int.MaxValue / 16));
+            Assert.AreEqual(false, testTAD.ajustarFactorCrecimiento(int.MaxValue / 64));
             Assert.AreEqual(false, testTAD.esDinamica());
             Assert.AreEqual(0, testTAD.darFactorCrecimiento());
             Assert.AreEqual(0, testTAD.darLongitud());
-            Assert.AreEqual(int.MaxValue / 16, testTAD.darCapacidad());
-            Assert.AreEqual(int.MaxValue / 16, testTAD.darItems().Length);
+            Assert.AreEqual(int.MaxValue / 64, testTAD.darCapacidad());
+            Assert.AreEqual(int.MaxValue / 64, testTAD.darItems().Length);
             #endregion
         }
         #endregion
@@ -933,16 +933,16 @@ namespace uTestDemoColecciones
         {
             #region Configurar
             testTAD = new clsColaVector<int>();
-            testItems = new int[int.MaxValue / 16];
+            testItems = new int[int.MaxValue / 64];
             testTAD.ponerItems(testItems);
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(false, testTAD.encolar(777));
-            Assert.AreEqual(int.MaxValue / 16, testTAD.darCapacidad());
-            Assert.AreEqual(int.MaxValue / 16, testTAD.darLongitud());
+            Assert.AreEqual(int.MaxValue / 64, testTAD.darCapacidad());
+            Assert.AreEqual(int.MaxValue / 64, testTAD.darLongitud());
             Assert.AreEqual(false, testTAD.esDinamica());
             Assert.AreEqual(0, testTAD.darFactorCrecimiento());
-            Assert.AreEqual(int.MaxValue / 16, testTAD.darItems().Length);
+            Assert.AreEqual(int.MaxValue / 64, testTAD.darItems().Length);
             CollectionAssert.AreEqual(testItems, testTAD.darItems());
             #endregion
         }

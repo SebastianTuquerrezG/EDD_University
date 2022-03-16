@@ -47,7 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\iTAD.cs" />
     <Compile Include="Nodos\clsNodoDobleEnlazado.cs" />
+    <Compile Include="Nodos\clsNodo.cs" />
     <Compile Include="Nodos\clsNodoEnlazado.cs" />
     <Compile Include="Enlazada\clsColaEnlazada.cs" />
     <Compile Include="Enlazada\clsListaEnlazada.cs" />
@@ -57,6 +59,10 @@
     <Compile Include="DobleEnlazada\clsPilaDobleEnlazada.cs" />
     <Compile Include="Interfaces\iCola.cs" />
     <Compile Include="Interfaces\iLista.cs" />
+    <Compile Include="Tads\clsTAD.cs" />
+    <Compile Include="Tads\clsTADDobleEnlazado.cs" />
+    <Compile Include="Tads\clsTADVectorial.cs" />
+    <Compile Include="Tads\clsTADEnlazado.cs" />
     <Compile Include="Vectoriales\clsColaVector.cs" />
     <Compile Include="Vectoriales\clsListaVector.cs" />
     <Compile Include="Vectoriales\clsPilaVector.cs" />
@@ -66,6 +72,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

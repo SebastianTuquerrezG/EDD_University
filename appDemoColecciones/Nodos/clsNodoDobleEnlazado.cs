@@ -2,43 +2,14 @@
 
 namespace Servicios.Colecciones.Nodos
 {
-    public class clsNodoDobleEnlazado<Tipo> where Tipo : IComparable
+    public class clsNodoDobleEnlazado<Tipo> : clsNodo<Tipo> where Tipo : IComparable
     {
-        private clsNodoDobleEnlazado<Tipo> atrAnterior = null;
-        private Tipo atrItem;
-        private clsNodoDobleEnlazado<Tipo> atrSiguiente = null;
+        private clsNodoDobleEnlazado<Tipo> atrAnterior;
+        private clsNodoDobleEnlazado<Tipo> atrSiguiente;
 
-        public bool ponerAnterior(clsNodoDobleEnlazado<Tipo> prmNuevoNodo)
-        {
-            atrAnterior = prmNuevoNodo;
-            return true;
-        }
-        public bool ponerSiguiente(clsNodoDobleEnlazado<Tipo> prmNuevoNodo)
-        {
-            atrSiguiente = prmNuevoNodo;
-            return true;
-        }
-
-        public void enlazarSiguiente(clsNodoDobleEnlazado<Tipo> prmSiguiente)
-        {
-            atrSiguiente = prmSiguiente;
-            prmSiguiente.ponerAnterior(this);
-        }
-        public void enlazarAnterior(clsNodoDobleEnlazado<Tipo> prmAnterior)
-        {
-            atrSiguiente = prmAnterior;
-            prmAnterior.ponerSiguiente(this);
-        }
-        public void enlazar(clsNodoDobleEnlazado<Tipo> prmAnterior, clsNodoDobleEnlazado<Tipo> prmSiguiente)
-        {
-            enlazarAnterior(prmAnterior);
-            enlazarSiguiente(prmSiguiente);
-        }
-
-        public clsNodoDobleEnlazado()
-        {
-        }
-        public clsNodoDobleEnlazado(Tipo prmItem, clsNodoDobleEnlazado<Tipo> prmAnterior,clsNodoDobleEnlazado<Tipo> prmSiguiente)
+        #region Constructores
+        public clsNodoDobleEnlazado() { }
+        public clsNodoDobleEnlazado(clsNodoDobleEnlazado<Tipo> prmAnterior, Tipo prmItem, clsNodoDobleEnlazado<Tipo> prmSiguiente)
         {
             enlazar(prmAnterior, prmSiguiente);
             atrItem = prmItem;
@@ -49,11 +20,9 @@ namespace Servicios.Colecciones.Nodos
             atrAnterior = null;
             atrSiguiente = null;
         }
-        
-        public Tipo darItem()
-        {
-            return atrItem;
-        }
+        #endregion
+
+        #region Accesores
         public clsNodoDobleEnlazado<Tipo> darAnterior()
         {
             return atrAnterior;
@@ -62,17 +31,47 @@ namespace Servicios.Colecciones.Nodos
         {
             return atrSiguiente;
         }
-        public void ModificarItem(Tipo atrItem)
+        public void conectarSiguiente(clsNodoDobleEnlazado<Tipo> prmNodo)
         {
-            this.atrItem = atrItem;
+            atrSiguiente = prmNodo;
         }
-        public void ModificarSiguiente(clsNodoDobleEnlazado<Tipo> nodoEnlazado)
+        #endregion
+
+        #region Mutadores
+        public bool ponerAnterior(clsNodoDobleEnlazado<Tipo> prmNuevoNodo)
         {
-            this.atrSiguiente = nodoEnlazado;
+            atrAnterior = prmNuevoNodo;
+            return true;
         }
-        public void ModificarAnteriror(clsNodoDobleEnlazado<Tipo> nodoEnlazado)
+        public bool ponerSiguiente(clsNodoDobleEnlazado<Tipo> prmNuevoNodo)
         {
-            this.atrAnterior = nodoEnlazado;
+            atrSiguiente = prmNuevoNodo;
+            return true;
         }
+        public void invertirEnlaces()
+        {
+            clsNodoDobleEnlazado<Tipo> varTemporal = atrAnterior;
+            atrAnterior = atrSiguiente;
+            atrSiguiente = varTemporal;
+        }
+        #endregion
+
+        #region Enlazadores
+        public void enlazarSiguiente(clsNodoDobleEnlazado<Tipo> prmSiguiente)
+        {
+            atrSiguiente = prmSiguiente;
+            prmSiguiente.ponerAnterior(this);
+        }
+        public void enlazarAnterior(clsNodoDobleEnlazado<Tipo> prmAnterior)
+        {
+            atrAnterior = prmAnterior;
+            prmAnterior.ponerSiguiente(this);
+        }
+        public void enlazar(clsNodoDobleEnlazado<Tipo> prmAnterior, clsNodoDobleEnlazado<Tipo> prmSiguiente)
+        {
+            enlazarAnterior(prmAnterior);
+            enlazarSiguiente(prmSiguiente);
+        }
+        #endregion Enlazadores
     }
 }

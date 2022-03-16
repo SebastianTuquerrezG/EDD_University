@@ -2,52 +2,48 @@
 
 namespace Servicios.Colecciones.Nodos
 {
-    public class clsNodoEnlazado<Tipo> where Tipo : IComparable
+    public class clsNodoEnlazado<Tipo> : clsNodo<Tipo> where Tipo : IComparable
     {
-        private Tipo atrItem;
-        private clsNodoEnlazado<Tipo> atrSiguiente = null;
+        private clsNodoEnlazado<Tipo> atrSiguiente;
 
-        public bool ponerSiguiente(clsNodoEnlazado<Tipo> prmNuevoNodo)
+        #region Constructores
+        public clsNodoEnlazado() { }
+        public clsNodoEnlazado(Tipo prmItem)
         {
-            atrSiguiente = prmNuevoNodo;
-            return true;
-        }
-
-        public clsNodoEnlazado()
-        {
+            atrItem = prmItem;
         }
         public clsNodoEnlazado(Tipo prmItem, clsNodoEnlazado<Tipo> prmSiguiente)
         {
             atrItem = prmItem;
             atrSiguiente = prmSiguiente;
         }
-        public clsNodoEnlazado(Tipo prmItem)
-        {
-            atrItem = prmItem;
-        }
-        public clsNodoEnlazado(Tipo prmItem, clsNodoEnlazado<Tipo> prmAnterior, clsNodoEnlazado<Tipo> prmSiguiente)
+        public clsNodoEnlazado(clsNodoEnlazado<Tipo> prmAnterior, Tipo prmItem, clsNodoEnlazado<Tipo> prmSiguiente)
         {
             atrItem = prmItem;
             atrSiguiente = prmSiguiente;
-            prmSiguiente.ponerSiguiente(this);
+            prmAnterior.ponerSiguiente(this);
         }
+        #endregion 
 
-        #region
-        public Tipo darItem()
-        {
-            return atrItem;
-        }
-        public clsNodoEnlazado<Tipo> darclsNodoEnlazado()
+        #region Accesores
+        public clsNodoEnlazado<Tipo> darSiguiente()
         {
             return atrSiguiente;
         }
-        public void ModificarItem(Tipo atrItem)
+        #endregion
+
+        #region Conectores
+        public void conectarSiguiente(clsNodoEnlazado<Tipo> prmNodo)
         {
-            this.atrItem = atrItem;
+            atrSiguiente = prmNodo;
         }
-        public void ModificarNodoEnlazado(clsNodoEnlazado<Tipo> nodoEnlazado)
+        #endregion
+
+        #region Mutadores
+        public bool ponerSiguiente(clsNodoEnlazado<Tipo> prmSiguiente)
         {
-            this.atrSiguiente = nodoEnlazado;
+            atrSiguiente = prmSiguiente;
+            return true;
         }
         #endregion
     }

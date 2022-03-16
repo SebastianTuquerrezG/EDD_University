@@ -84,11 +84,11 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar 
-            testPila = new clsPilaVector<int>(int.MaxValue / 16);
+            testPila = new clsPilaVector<int>(int.MaxValue / 64);
             Assert.AreNotEqual(null, testPila.darItems());
             Assert.AreEqual(0, testPila.darLongitud());
-            Assert.AreEqual(int.MaxValue / 16, testPila.darItems().Length);
-            Assert.AreEqual(int.MaxValue / 16, testPila.darCapacidad());
+            Assert.AreEqual(int.MaxValue / 64, testPila.darItems().Length);
+            Assert.AreEqual(int.MaxValue / 64, testPila.darCapacidad());
             Assert.AreEqual(false, testPila.esDinamica());
             Assert.AreEqual(0, testPila.darFactorCrecimiento());
             #endregion
@@ -99,7 +99,7 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testPila = new clsPilaVector<int>(int.MaxValue / 16 + 1); 
+            testPila = new clsPilaVector<int>(int.MaxValue / 64 + 1); 
             Assert.AreNotEqual(null, testPila.darItems());
             Assert.AreEqual(0, testPila.darLongitud());
             Assert.AreEqual(0, testPila.darItems().Length);
@@ -221,7 +221,7 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testPila = new clsPilaVector<int>(int.MaxValue / 16 + 1, true); 
+            testPila = new clsPilaVector<int>(int.MaxValue / 64 + 1, true); 
             Assert.AreNotEqual(null, testPila.darItems());
             Assert.AreEqual(0, testPila.darLongitud());
             Assert.AreEqual(0, testPila.darItems().Length);
@@ -236,7 +236,7 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testPila = new clsPilaVector<int>(int.MaxValue / 16 + 1, false); 
+            testPila = new clsPilaVector<int>(int.MaxValue / 64 + 1, false); 
             Assert.AreNotEqual(null, testPila.darItems());
             Assert.AreEqual(0, testPila.darLongitud());
             Assert.AreEqual(0, testPila.darItems().Length);
@@ -328,7 +328,7 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testPila = new clsPilaVector<int>(-100, int.MaxValue / 16 + 1);
+            testPila = new clsPilaVector<int>(-100, int.MaxValue / 64 + 1);
             Assert.AreNotEqual(null, testPila.darItems());
             Assert.AreEqual(0, testPila.darLongitud());
             Assert.AreEqual(0, testPila.darItems().Length);
@@ -389,7 +389,7 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testPila = new clsPilaVector<int>(0, int.MaxValue / 16 + 1);
+            testPila = new clsPilaVector<int>(0, int.MaxValue / 64 + 1);
             Assert.AreNotEqual(null, testPila.darItems());
             Assert.AreEqual(0, testPila.darLongitud());
             Assert.AreEqual(0, testPila.darItems().Length);
@@ -450,7 +450,7 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testPila = new clsPilaVector<int>(500, int.MaxValue / 16 + 1);
+            testPila = new clsPilaVector<int>(500, int.MaxValue / 64 + 1);
             Assert.AreNotEqual(null, testPila.darItems());
             Assert.AreEqual(0, testPila.darLongitud());
             Assert.AreEqual(0, testPila.darItems().Length);
@@ -466,7 +466,7 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testPila = new clsPilaVector<int>(int.MaxValue / 16, -1);
+            testPila = new clsPilaVector<int>(int.MaxValue / 64, -1);
             Assert.AreNotEqual(null, testPila.darItems());
             Assert.AreEqual(0, testPila.darLongitud());
             Assert.AreEqual(0, testPila.darItems().Length);
@@ -481,11 +481,11 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testPila = new clsPilaVector<int>(int.MaxValue / 16, 0);
+            testPila = new clsPilaVector<int>(int.MaxValue / 64, 0);
             Assert.AreNotEqual(null, testPila.darItems());
             Assert.AreEqual(0, testPila.darLongitud());
-            Assert.AreEqual(int.MaxValue / 16, testPila.darItems().Length);
-            Assert.AreEqual(int.MaxValue / 16, testPila.darCapacidad());
+            Assert.AreEqual(int.MaxValue / 64, testPila.darItems().Length);
+            Assert.AreEqual(int.MaxValue / 64, testPila.darCapacidad());
             Assert.AreEqual(false, testPila.esDinamica());
             Assert.AreEqual(0, testPila.darFactorCrecimiento());
             #endregion
@@ -496,7 +496,7 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testPila = new clsPilaVector<int>(int.MaxValue / 16, 500);
+            testPila = new clsPilaVector<int>(int.MaxValue / 64, 500);
             Assert.AreNotEqual(null, testPila.darItems());
             Assert.AreEqual(0, testPila.darLongitud());
             Assert.AreEqual(0, testPila.darItems().Length);
@@ -511,7 +511,7 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testPila = new clsPilaVector<int>(int.MaxValue / 16, int.MaxValue / 16 + 1);
+            testPila = new clsPilaVector<int>(int.MaxValue / 64, int.MaxValue / 64 + 1);
             Assert.AreNotEqual(null, testPila.darItems());
             Assert.AreEqual(0, testPila.darLongitud());
             Assert.AreEqual(0, testPila.darItems().Length);
@@ -527,7 +527,7 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testPila = new clsPilaVector<int>(int.MaxValue / 16 + 1, -1);
+            testPila = new clsPilaVector<int>(int.MaxValue / 64 + 1, -1);
             Assert.AreNotEqual(null, testPila.darItems());
             Assert.AreEqual(0, testPila.darLongitud());
             Assert.AreEqual(0, testPila.darItems().Length);
@@ -542,7 +542,7 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testPila = new clsPilaVector<int>(int.MaxValue / 16 + 1, 0);
+            testPila = new clsPilaVector<int>(int.MaxValue / 64 + 1, 0);
             Assert.AreNotEqual(null, testPila.darItems());
             Assert.AreEqual(0, testPila.darLongitud());
             Assert.AreEqual(0, testPila.darItems().Length);
@@ -557,7 +557,7 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testPila = new clsPilaVector<int>(int.MaxValue / 16 + 1, 500);
+            testPila = new clsPilaVector<int>(int.MaxValue / 64 + 1, 500);
             Assert.AreNotEqual(null, testPila.darItems());
             Assert.AreEqual(0, testPila.darLongitud());
             Assert.AreEqual(0, testPila.darItems().Length);
@@ -572,7 +572,7 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testPila = new clsPilaVector<int>(int.MaxValue / 16 + 1, int.MaxValue / 16 + 1);
+            testPila = new clsPilaVector<int>(int.MaxValue / 64 + 1, int.MaxValue / 64 + 1);
             Assert.AreNotEqual(null, testPila.darItems());
             Assert.AreEqual(0, testPila.darLongitud());
             Assert.AreEqual(0, testPila.darItems().Length);
@@ -633,7 +633,7 @@ namespace uTestDemoColecciones
             #region Configurar
             #endregion
             #region Probar y Comprobar
-            testPila = new clsPilaVector<int>(int.MaxValue, int.MaxValue / 16 + 1);
+            testPila = new clsPilaVector<int>(int.MaxValue, int.MaxValue / 64 + 1);
             Assert.AreNotEqual(null, testPila.darItems());
             Assert.AreEqual(0, testPila.darLongitud());
             Assert.AreEqual(0, testPila.darItems().Length);
@@ -735,15 +735,15 @@ namespace uTestDemoColecciones
         {
             #region Configurar
             testPila = new clsPilaVector<int>();
-            testItems = new int[int.MaxValue / 16];
+            testItems = new int[int.MaxValue / 64];
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(true, testPila.ponerItems(testItems));
-            Assert.AreEqual(int.MaxValue / 16, testPila.darCapacidad());
-            Assert.AreEqual(int.MaxValue / 16, testPila.darLongitud());
-            for (int varIterador = 0; varIterador < int.MaxValue / 16; varIterador++)
+            Assert.AreEqual(int.MaxValue / 64, testPila.darCapacidad());
+            Assert.AreEqual(int.MaxValue / 64, testPila.darLongitud());
+            for (int varIterador = 0; varIterador < int.MaxValue / 64; varIterador++)
                 Assert.AreEqual(0, testPila.darItems()[varIterador]);
-            Assert.AreEqual(int.MaxValue / 16, testPila.darItems().Length);
+            Assert.AreEqual(int.MaxValue / 64, testPila.darItems().Length);
             Assert.AreEqual(false, testPila.esDinamica());
             Assert.AreEqual(0, testPila.darFactorCrecimiento());
             #endregion
@@ -753,7 +753,7 @@ namespace uTestDemoColecciones
         {
             #region Configurar
             testPila = new clsPilaVector<int>();
-            testItems = new int[int.MaxValue / 16 + 1];
+            testItems = new int[int.MaxValue / 64 + 1];
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(false, testPila.ponerItems(testItems));
@@ -767,15 +767,15 @@ namespace uTestDemoColecciones
         public void uTestAjustarFlexibilidadCapacidadEnBorde()
         {
             #region Configurar
-            testPila = new clsPilaVector<int>(int.MaxValue / 16);
+            testPila = new clsPilaVector<int>(int.MaxValue / 64);
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(false, testPila.ajustarFlexibilidad(true));
             Assert.AreEqual(false, testPila.esDinamica());
             Assert.AreEqual(0, testPila.darFactorCrecimiento());
             Assert.AreEqual(0, testPila.darLongitud());
-            Assert.AreEqual(int.MaxValue / 16, testPila.darCapacidad());
-            Assert.AreEqual(int.MaxValue / 16, testPila.darItems().Length);
+            Assert.AreEqual(int.MaxValue / 64, testPila.darCapacidad());
+            Assert.AreEqual(int.MaxValue / 64, testPila.darItems().Length);
             #endregion
         }
         [TestMethod]
@@ -831,9 +831,9 @@ namespace uTestDemoColecciones
             testPila = new clsPilaVector<int>(500);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testPila.ajustarFactorCrecimiento((int.MaxValue / 16)-testPila.darItems().Length));
+            Assert.AreEqual(true, testPila.ajustarFactorCrecimiento((int.MaxValue / 64)-testPila.darItems().Length));
             Assert.AreEqual(true, testPila.esDinamica());
-            Assert.AreEqual(int.MaxValue / 16 - testPila.darItems().Length, testPila.darFactorCrecimiento());
+            Assert.AreEqual(int.MaxValue / 64 - testPila.darItems().Length, testPila.darFactorCrecimiento());
             Assert.AreEqual(0, testPila.darLongitud());
             Assert.AreEqual(500, testPila.darCapacidad());
             Assert.AreEqual(500, testPila.darItems().Length);
@@ -843,15 +843,15 @@ namespace uTestDemoColecciones
         public void uTestAjustarFactorCrecimientoEnBordeConCapacidadEnBorde()
         {
             #region Configurar
-            testPila = new clsPilaVector<int>(int.MaxValue / 16);
+            testPila = new clsPilaVector<int>(int.MaxValue / 64);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testPila.ajustarFactorCrecimiento(int.MaxValue / 16));
+            Assert.AreEqual(false, testPila.ajustarFactorCrecimiento(int.MaxValue / 64));
             Assert.AreEqual(false, testPila.esDinamica());
             Assert.AreEqual(0, testPila.darFactorCrecimiento());
             Assert.AreEqual(0, testPila.darLongitud());
-            Assert.AreEqual(int.MaxValue / 16, testPila.darCapacidad());
-            Assert.AreEqual(int.MaxValue / 16, testPila.darItems().Length);
+            Assert.AreEqual(int.MaxValue / 64, testPila.darCapacidad());
+            Assert.AreEqual(int.MaxValue / 64, testPila.darItems().Length);
             #endregion
         }
         #endregion
@@ -933,16 +933,16 @@ namespace uTestDemoColecciones
         {
             #region Configurar
             testPila = new clsPilaVector<int>();
-            testItems = new int[int.MaxValue / 16];
+            testItems = new int[int.MaxValue / 64];
             testPila.ponerItems(testItems);
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(false, testPila.apilar(777));
-            Assert.AreEqual(int.MaxValue / 16, testPila.darCapacidad());
-            Assert.AreEqual(int.MaxValue / 16, testPila.darLongitud());
+            Assert.AreEqual(int.MaxValue / 64, testPila.darCapacidad());
+            Assert.AreEqual(int.MaxValue / 64, testPila.darLongitud());
             Assert.AreEqual(false, testPila.esDinamica());
             Assert.AreEqual(0, testPila.darFactorCrecimiento());
-            Assert.AreEqual(int.MaxValue / 16, testPila.darItems().Length);
+            Assert.AreEqual(int.MaxValue / 64, testPila.darItems().Length);
             CollectionAssert.AreEqual(testItems, testPila.darItems());
             #endregion
         }

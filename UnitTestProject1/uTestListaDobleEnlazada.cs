@@ -95,12 +95,12 @@ namespace uTestDemoColecciones
         {
             #region Configurar
             testTAD = new clsListaDobleEnlazada<int>();
-            testItems = new int[int.MaxValue / 16];
+            testItems = new int[int.MaxValue / 64];
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(true, testTAD.ponerItems(testItems));
-            Assert.AreEqual(int.MaxValue / 16, testTAD.darLongitud());
-            Assert.AreEqual(int.MaxValue / 16, testTAD.darItems().Length);
+            Assert.AreEqual(int.MaxValue / 64, testTAD.darLongitud());
+            Assert.AreEqual(int.MaxValue / 64, testTAD.darItems().Length);
             CollectionAssert.AreEqual(testItems, testTAD.darItems());
             #endregion
         }
@@ -109,7 +109,7 @@ namespace uTestDemoColecciones
         {
             #region Configurar
             testTAD = new clsListaDobleEnlazada<int>();
-            testItems = new int[int.MaxValue / 16 + 1];
+            testItems = new int[int.MaxValue / 64 + 1];
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(false, testTAD.ponerItems(testItems));
@@ -166,13 +166,13 @@ namespace uTestDemoColecciones
         {
             #region Configurar
             testTAD = new clsListaDobleEnlazada<int>();
-            testItems = new int[int.MaxValue / 16];
+            testItems = new int[int.MaxValue / 64];
             testTAD.ponerItems(testItems);
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(false, testTAD.agregar(777));
-            Assert.AreEqual(int.MaxValue / 16, testTAD.darLongitud());
-            Assert.AreEqual(int.MaxValue / 16, testTAD.darItems().Length);
+            Assert.AreEqual(int.MaxValue / 64, testTAD.darLongitud());
+            Assert.AreEqual(int.MaxValue / 64, testTAD.darItems().Length);
             CollectionAssert.AreEqual(testItems, testTAD.darItems());
             #endregion
         }
